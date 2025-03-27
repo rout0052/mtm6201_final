@@ -10,12 +10,122 @@
     <!-- CSS LINKS -->
     <link rel="stylesheet" href="css/reset.css"> <!-- Reset CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Bootstrap CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Bootstrap Icons CDN Link -->
+    <link rel="stylesheet" href="https://use.typekit.net/nbg6njd.css"> <!-- Adobe Fonts Link -->
     <link rel="stylesheet" href="libraries/keyboard-css-main/dist/css/main.css"> <!-- CSS Library for Buttons - Made by Dharmen Shah, Username: shhdharmen, https://www.cssscript.com/keyboard-style-buttons/  -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-md bg-primary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">
+                    <img src="images/general-assets/tarobytez-logo.svg" alt="logo for 'tarobytez'" height="40px" width="auto">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
 
+        <main>
+            <section class="container">
+                <div class="row">
+                    <picture class="col-xs-12 col-sm-5">
+                        <source srcset="images/homepage/taro-cowboy_450.jpg,
+                                        images/homepages/taro-cowboy_900.jpg 2x"
+                                media="(min-width:992px)">
+                        <source srcset="images/homepage/taro-cowboy_325.jpg,
+                                        images/homepages/taro-cowboy_650.jpg 2x"
+                                media="(min-width:1px)">
+                        <img src="images/homepage/taro-cowboy_450.jpg" alt="Taro, a white transmasculine person with shaggy brown hair is smiling at the camera, wearing a white cowboy hat and purple cowboy shirt.">
+                    </picture>
+                    <div class="col-xs-12 col-sm-7">
+                        <h1>Welcome!</h1>
+                        <p>I’m Taro Routly, a 20 year old multimedia artist who specializes in web design and  development attending Algonquin College’s Interactive Media Design  program.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="masonry">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+
+                <div>
+                    <h2>Our Mission</h2>
+                    <p>The intersection of art and technology is an unending bid of excitement  that we at tarobytez aim to explore the depths of. Through websites,  animation, illustrations and games, we thrive on innovation through the  creative and technical process.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2><a href="portfolio.html">Portfolio</a></h2>
+                <div class="port-categories">
+                    <a href="portfolio.html" class="port-button">WEB DESIGN</a>
+                    <a href="portfolio.html" class="port-button">ILLUSTRATION</a>
+                    <a href="portfolio.html" class="port-button">UI/GRAPHICS</a>
+                    <a href="portfolio.html" class="port-button">ANIMATION</a>
+                    <a href="portfolio.html" class="port-button">VIDEOGRAPHY</a>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Interested In More?</h2>
+                <div>
+                    <a href="contact.html" class="kbc-button kbc-button-primary kbc-button-lg">Contact Me!</a>
+                    <a href="https://github.com/rout0052" class="kbc-button kbc-button-primary"><img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"/>
+                      </a>
+                    <a href="https://tarobytez.itch.io/" class="kbc-button kbc-button-primary"><img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg"/></a>
+                    <a href="https://www.linkedin.com/in/taro-routly/" class="kbc-button kbc-button-primary"><img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"/></a>
+                    <a href="https://www.instagram.com/tarobytez/" class="kbc-button kbc-button-primary"><img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg"/></a>
+                </div>
+            </section>
+        </main>
+        
+
+        <footer class="footer footer-dark container">
+            <div class="row">
+                <div class="col">
+                    <a href="index.html">
+                        <img src="images/general-assets/tarobytez-logo.svg" alt="logo for 'tarobytez'" height="40px" width="auto">
+                    </a>
+                    <ul class="unstyled p-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>   
+                </div>
+
+                <div class="col">
+                    <a href="https://github.com/rout0052"><img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"/></a>
+                    <a href="https://tarobytez.itch.io/"><img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg"/></a>
+                    <a href="https://www.linkedin.com/in/taro-routly/"><img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"/></a>
+                    <a href="https://www.instagram.com/tarobytez/"><img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg"/></a>
+                </div>
+            </div>
+        </footer>
+
+
+        
+    </div>
 
 
 
