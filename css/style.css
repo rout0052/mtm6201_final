@@ -1,6 +1,111 @@
 /* CSS Here */
 
+
 :root {
     /* Variables Here */
+    --primary: #3A1259;
+    --bs-secondary: #926dd6;
+    --bs-link-color: #612C88;
+    
 }
 
+.wrapper {
+    margin:auto;
+    width: 100%;
+    
+    background-color: white;
+}
+
+.footer-dark {
+    width:100%;
+    background-color: var(--bs-primary);
+}
+
+body {
+    font-family: gill-sans-nova, sans-serif;
+}
+
+h1 {
+    font-family: kallisto, sans-serif; 
+    font-weight:900;
+}
+
+h2 {
+    font-family: kallisto, sans-serif;
+    font-weight: 800;
+
+}
+
+
+a:link {
+    color: var(--bs-link-color);
+    
+}
+a.port-button:link {
+    color: white;
+
+}
+a:visited {
+    color: var(--bs-link-color);
+    
+}
+a:hover {
+
+}
+
+a:active {
+    
+}
+
+a:focus {
+    border: 5px solid var(--bs-secondary);
+}
+
+section {
+
+}
+
+/* .navbar-dark {
+    background-color: var(--bs-primary);
+    
+} */
+
+.navbar a:link, .footer a:link {
+    color:white;
+    font-weight:700;
+}
+
+.navbar a:visited, .footer a:visited {
+    color:white;
+}
+
+.navbar a:hover, .footer a:hover {
+    color:white;
+}
+
+.navbar a:active, .footer a:active {
+
+}
+
+img.icon {
+    width: 40px;
+    height: auto;
+}
+
+
+ul.unstyled {
+    list-style-type: none;
+}
+/* md Screen Breakpoint (Desktop) */
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url("/images/general-assets/background.png");
+    }
+    .wrapper {
+        width: 75%;
+        height:100%;
+        max-width: 1200px;
+        
+        
+    }
+}
