@@ -4,8 +4,8 @@
 :root {
     /* Variables Here */
     --primary: #3A1259;
-    --bs-secondary: #926dd6;
-    --bs-link-color: #612C88;
+    --secondary: #926dd6;
+    --link-color: #612C88;
     
 }
 
@@ -16,10 +16,6 @@
     background-color: white;
 }
 
-.footer-dark {
-    width:100%;
-    background-color: var(--bs-primary);
-}
 
 body {
     font-family: gill-sans-nova, sans-serif;
@@ -33,12 +29,12 @@ h1 {
 h2 {
     font-family: kallisto, sans-serif;
     font-weight: 800;
+    
 
 }
 
-
 a:link {
-    color: var(--bs-link-color);
+    color: var(--link-color);
     
 }
 a.port-button:link {
@@ -46,7 +42,7 @@ a.port-button:link {
 
 }
 a:visited {
-    color: var(--bs-link-color);
+    color: var(--link-color);
     
 }
 a:hover {
@@ -58,17 +54,18 @@ a:active {
 }
 
 a:focus {
-    border: 5px solid var(--bs-secondary);
+    border: 2px solid var(--secondary);
+    text-decoration: underline;
 }
 
-section {
-
+.nav-link.active {
+    text-decoration: underline;
 }
 
-/* .navbar-dark {
-    background-color: var(--bs-primary);
+.navbar-dark {
+    background-color: var(--primary) !important;
     
-} */
+}
 
 .navbar a:link, .footer a:link {
     color:white;
@@ -79,23 +76,85 @@ section {
     color:white;
 }
 
-.navbar a:hover, .footer a:hover {
+
+.footer-dark {
+    background-color: var(--primary);
     color:white;
+    text-align: center;
+    
 }
 
-.navbar a:active, .footer a:active {
+footer p, footer ul, footer a > img.bytez-logo {
+    margin-top: 20px;
+}
 
+footer a {
+    display:inline;
+    font-size:1.5rem;           
+}
+
+footer div.socials {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-around;
+    
+    
+}
+footer div.socials a {
+    padding: 10px;
+
+}
+
+
+
+ul.unstyled {
+    list-style-type: none;
 }
 
 img.icon {
     width: 40px;
     height: auto;
 }
-
-
-ul.unstyled {
-    list-style-type: none;
+footer img.icon {
+    width:60px;
 }
+
+.bytez-logo {
+    display: inline-block;
+    height:40px;
+    width:auto;
+}
+
+footer .bytez-logo {
+    height:70px;
+}
+
+
+
+/* sm Screen Breakpoint (Tablet) */
+@media screen and (min-width: 576px) {
+    .footer-dark {
+        text-align:start;
+    }
+
+    footer div.socials {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer div.socials a {
+        place-self: center;
+        
+    }
+    
+    
+
+    footer ul{
+        margin-top: 0px;
+    }
+
+}
+
 /* md Screen Breakpoint (Desktop) */
 @media screen and (min-width: 768px) {
     body {
@@ -109,3 +168,4 @@ ul.unstyled {
         
     }
 }
+
