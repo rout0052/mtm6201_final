@@ -18,10 +18,10 @@
 <body>
     <div class="wrapper">
         <header>
-            <nav class="navbar navbar-expand-md bg-primary">
+            <nav class="navbar navbar-expand-md navbar-dark bg-primary">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="index.html">
-                    <img src="images/general-assets/tarobytez-logo.svg" alt="logo for 'tarobytez'" height="40px" width="auto">
+                    <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,23 +46,23 @@
         <main>
             <section class="container">
                 <div class="row">
-                    <picture class="col-xs-12 col-sm-5">
+                    <picture class="col-xs-12 col-sm-4">
                         <source srcset="images/homepage/taro-cowboy_450.jpg,
-                                        images/homepages/taro-cowboy_900.jpg 2x"
+                                        images/homepage/taro-cowboy_900.jpg 2x"
                                 media="(min-width:992px)">
                         <source srcset="images/homepage/taro-cowboy_325.jpg,
-                                        images/homepages/taro-cowboy_650.jpg 2x"
+                                        images/homepage/taro-cowboy_650.jpg 2x"
                                 media="(min-width:1px)">
                         <img src="images/homepage/taro-cowboy_450.jpg" alt="Taro, a white transmasculine person with shaggy brown hair is smiling at the camera, wearing a white cowboy hat and purple cowboy shirt.">
                     </picture>
-                    <div class="col-xs-12 col-sm-7">
+                    <div class="col-xs-12 col-sm-8">
                         <h1>Welcome!</h1>
                         <p>I’m Taro Routly, a 20 year old multimedia artist who specializes in web design and  development attending Algonquin College’s Interactive Media Design  program.</p>
                     </div>
                 </div>
             </section>
             
-            <section>
+            <section class="container">
                 <div class="masonry">
                     <img src="" alt="">
                     <img src="" alt="">
@@ -76,7 +76,7 @@
                 </div>
             </section>
             
-            <section>
+            <section class="container">
                 <h2><a href="portfolio.html">Portfolio</a></h2>
                 <div class="port-categories">
                     <a href="portfolio.html" class="port-button">WEB DESIGN</a>
@@ -87,7 +87,7 @@
                 </div>
             </section>
             
-            <section>
+            <section class="container">
                 <h2>Interested In More?</h2>
                 <div>
                     <a href="contact.html" class="kbc-button kbc-button-primary kbc-button-lg">Contact Me!</a>
@@ -101,24 +101,30 @@
         </main>
         
 
-        <footer class="footer footer-dark container">
-            <div class="row">
-                <div class="col">
-                    <a href="index.html">
-                        <img src="images/general-assets/tarobytez-logo.svg" alt="logo for 'tarobytez'" height="40px" width="auto">
-                    </a>
-                    <ul class="unstyled p-0">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>   
-                </div>
+        <footer class="footer footer-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <a href="index.html">
+                            <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
+                        </a>
+                        <ul class="unstyled p-0">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>   
+                    </div>
 
-                <div class="col">
-                    <a href="https://github.com/rout0052"><img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"/></a>
-                    <a href="https://tarobytez.itch.io/"><img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg"/></a>
-                    <a href="https://www.linkedin.com/in/taro-routly/"><img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"/></a>
-                    <a href="https://www.instagram.com/tarobytez/"><img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg"/></a>
+                    <div class="col-xs-12 col-sm-6 col-md-4 socials">
+                        <a href="https://github.com/rout0052"><img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"/></a>
+                        <a href="https://tarobytez.itch.io/"><img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg"/></a>
+                        <a href="https://www.linkedin.com/in/taro-routly/"><img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"/></a>
+                        <a href="https://www.instagram.com/tarobytez/"><img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg"/></a>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 h5">
+                        <p>Copyright © Taro Routly 2025</p>
+                    </div>
                 </div>
             </div>
         </footer>
