@@ -297,7 +297,7 @@ footer .bytez-logo {
         text-align: left;
     } */
 
-    section#mission div:nth-child(2) {
+    section#welcome div:nth-child(2), section#mission div:nth-child(2) {
         align-self:center;
         
     }
