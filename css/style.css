@@ -34,7 +34,7 @@ h2 {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 section {
@@ -222,6 +222,7 @@ img.icon {
 }
 footer img.icon {
     width:60px;
+    
 }
 
 .bytez-logo {
@@ -265,6 +266,7 @@ footer .bytez-logo {
 
 /* md Screen Breakpoint (Desktop) */
 @media screen and (min-width: 768px) {
+    
     body {
         background-image: url("/images/general-assets/background.png");
         background-attachment: fixed;                                   
@@ -277,8 +279,27 @@ footer .bytez-logo {
         
     }
 
-    section#mission {
+    div.navbar-collapse ul {
+        justify-self: right;
+    }
+    div.navbar-collapse li.nav-item {
+        padding:5px;
+        font-size:1.25rem;
+        border-left: 1px solid white; 
+    }
+
+    div.navbar-collapse li.nav-item:first-child {
+        border-left: none; 
+    }
+
+
+    /* section#mission {
         text-align: left;
+    } */
+
+    section#mission div:nth-child(2) {
+        align-self:center;
+        
     }
 
     section#portfolio-blurb div.port-categories {
@@ -288,17 +309,18 @@ footer .bytez-logo {
         grid-column: 1 / span 2;
     }
 
-    /* section#mission div.masonry {
-        grid-auto-rows: auto;
-        grid-template-areas:  'rantly rantly autumns autumns'
-                              'rantly rantly autumns autumns'
-                              'rylan rylan board board'
-                              'rylan rylan board board';
-        
-    } */
+    section#mission div.masonry .brick:nth-child(1) {
+        align-self:self-end;
+    }
+
+    section#mission div.masonry .brick:nth-child(2) {
+        align-self:self-end;
+    } 
+
     
     footer .bytez-logo {
         height:50px;
     }
 }
+
 
