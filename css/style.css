@@ -33,6 +33,14 @@ h2 {
 
 }
 
+p {
+    font-size: 1.5rem;
+}
+
+section {
+    margin-top:40px;
+}
+
 a:link {
     color: var(--link-color);
     
@@ -76,6 +84,74 @@ a:focus {
     color:white;
 }
 
+/* HOMEPAGE: WELCOME SECTION */
+section#welcome {
+    text-align: center;
+}
+
+section#welcome > img {
+    width:100%;
+    height:auto;
+}
+
+
+/* HOMEPAGE: MISSION SECTION */
+section#mission {
+    text-align: center;
+}
+
+/* HOMEPAGE: PORTFOLIO BLURB */
+
+section#portfolio-blurb {
+    text-align:center;
+}
+
+section#portfolio-blurb div.port-categories {
+    display:grid;
+    gap:10px;
+}
+
+section#portfolio-blurb div.port-categories > a.port-button {
+    color:white;
+    height:100px;
+    width: 100%;    
+    align-self: center;
+    position:relative;
+    
+}
+
+section#portfolio-blurb div.port-categories > a > h3 {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section#portfolio-blurb div.port-categories > a.port-button > picture > img {
+    object-fit: cover;
+
+    height:100px;
+    width: 100%;    
+    
+}
+
+/* HOMEPAGE: CONTACT SECTION ON HOME PAGE */
+
+section#contact-blurb {
+    text-align: center;
+    margin-bottom:40px;
+}
+
+section#contact-blurb div.socials {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+section#contact-blurb div.socials a:first-child, section#contact-blurb div.socials a:nth-child(4),section#contact-blurb div.socials a:nth-child(5) {
+    order:1;
+}
 
 .footer-dark {
     background-color: var(--primary);
@@ -134,6 +210,10 @@ footer .bytez-logo {
 
 /* sm Screen Breakpoint (Tablet) */
 @media screen and (min-width: 576px) {
+    section#welcome {
+        text-align: left;
+    }
+    
     .footer-dark {
         text-align:start;
     }
@@ -167,5 +247,17 @@ footer .bytez-logo {
         
         
     }
+
+    section#mission {
+        text-align: left;
+    }
+
+    section#portfolio-blurb div.port-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section#portfolio-blurb div.port-categories > a.port-button:first-child {
+        grid-column: 1 / span 2;
+    }
+    
 }
 
