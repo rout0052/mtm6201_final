@@ -66,6 +66,10 @@ a:focus {
     text-decoration: underline;
 }
 
+.nav-link {
+    font-family:kallisto, sans-serif;
+}
+
 .nav-link.active {
     text-decoration: underline;
 }
