@@ -97,7 +97,36 @@ section#welcome > img {
 
 /* HOMEPAGE: MISSION SECTION */
 section#mission {
-    text-align: center;
+    text-align: center;    
+}
+
+section#mission div.masonry {
+    display:grid;
+    grid-template-areas:  'rantly rantly autumns autumns'
+                          'rylan rylan autumns autumns'
+                          'rylan rylan autumns autumns'
+                          'rylan rylan board board';
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+section#mission div.masonry .brick:nth-child(1) {
+    grid-area:rantly;
+    justify-self: right;
+}
+
+section#mission div.masonry .brick:nth-child(2) {
+    grid-area:autumns;
+    justify-self: left;
+}
+section#mission div.masonry .brick:nth-child(3) {
+    grid-area:rylan;
+    justify-self: right;
+}
+section#mission div.masonry .brick:nth-child(4) {
+    grid-area:board;
+    justify-self: left;
+    align-self:self-start;
 }
 
 /* HOMEPAGE: PORTFOLIO BLURB */
@@ -177,12 +206,11 @@ footer div.socials {
     
     
 }
+
 footer div.socials a {
     padding: 10px;
 
 }
-
-
 
 ul.unstyled {
     list-style-type: none;
@@ -239,6 +267,7 @@ footer .bytez-logo {
 @media screen and (min-width: 768px) {
     body {
         background-image: url("/images/general-assets/background.png");
+        background-attachment: fixed;                                   
     }
     .wrapper {
         width: 75%;
@@ -258,6 +287,18 @@ footer .bytez-logo {
     section#portfolio-blurb div.port-categories > a.port-button:first-child {
         grid-column: 1 / span 2;
     }
+
+    /* section#mission div.masonry {
+        grid-auto-rows: auto;
+        grid-template-areas:  'rantly rantly autumns autumns'
+                              'rantly rantly autumns autumns'
+                              'rylan rylan board board'
+                              'rylan rylan board board';
+        
+    } */
     
+    footer .bytez-logo {
+        height:50px;
+    }
 }
 
