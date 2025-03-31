@@ -29,8 +29,6 @@ h1 {
 h2 {
     font-family: kallisto, sans-serif;
     font-weight: 800;
-    
-
 }
 
 p {
@@ -87,6 +85,62 @@ a:focus {
 .navbar a:visited, .footer a:visited {
     color:white;
 }
+
+.footer-dark {
+    background-color: var(--primary);
+    color:white;
+    text-align: center;
+    
+}
+
+footer p, footer ul, footer a > img.bytez-logo {
+    margin-top: 20px;
+}
+
+footer a {
+    display:inline;
+    font-size:1.5rem;           
+}
+
+footer div.socials {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-around;
+    
+    
+}
+
+footer div.socials a {
+    padding: 10px;
+
+}
+
+ul.unstyled {
+    list-style-type: none;
+}
+
+img.icon {
+    width: 40px;
+    height: auto;
+}
+footer img.icon {
+    width:60px;
+    
+}
+
+.bytez-logo {
+    display: inline-block;
+    height:40px;
+    width:auto;
+}
+
+footer .bytez-logo {
+    height:70px;
+}
+
+
+/* HOME PAGE */
 
 /* HOMEPAGE: WELCOME SECTION */
 section#welcome {
@@ -186,58 +240,23 @@ section#contact-blurb div.socials a:first-child, section#contact-blurb div.socia
     order:1;
 }
 
-.footer-dark {
-    background-color: var(--primary);
-    color:white;
-    text-align: center;
-    
+
+/* PORTFOLIO PAGE */
+
+/* PORTFOLIO: FILTERS SECTION */
+
+section#filters a.toggle[aria-expanded="false"] h4 > svg.bi-chevron-right   {
+    transition: transform 0.5s;
 }
 
-footer p, footer ul, footer a > img.bytez-logo {
-    margin-top: 20px;
+section#filters a.toggle[aria-expanded="true"] h4 > svg.bi-chevron-right   {
+    transform:rotate(90deg);
+    transition: transform 0.5ss;
 }
 
-footer a {
-    display:inline;
-    font-size:1.5rem;           
-}
 
-footer div.socials {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    justify-content: space-around;
-    
-    
-}
 
-footer div.socials a {
-    padding: 10px;
 
-}
-
-ul.unstyled {
-    list-style-type: none;
-}
-
-img.icon {
-    width: 40px;
-    height: auto;
-}
-footer img.icon {
-    width:60px;
-    
-}
-
-.bytez-logo {
-    display: inline-block;
-    height:40px;
-    width:auto;
-}
-
-footer .bytez-logo {
-    height:70px;
-}
 
 
 
@@ -272,7 +291,7 @@ footer .bytez-logo {
 @media screen and (min-width: 768px) {
     
     body {
-        background-image: url("/images/general-assets/background.png");
+        background-image: url("../images/general-assets/background.png");
         background-attachment: fixed;                                   
     }
     .wrapper {
