@@ -245,7 +245,7 @@ section#contact-blurb div.socials a:first-child, section#contact-blurb div.socia
 
 /* PORTFOLIO: FILTERS SECTION */
 
-section#filters a.toggle[aria-expanded="false"] h4 > svg.bi-chevron-right   {
+section#filters a.toggle h4 > svg.bi-chevron-right   {
     transition: transform 0.5s;
 }
 
@@ -254,6 +254,44 @@ section#filters a.toggle[aria-expanded="true"] h4 > svg.bi-chevron-right   {
     transition: transform 0.5ss;
 }
 
+section#filters .card {
+    border: none;
+    border-left: var(--secondary) 2px solid;
+    border-radius: 0;
+}
+
+input[type="radio"] {
+    accent-color: var(--secondary); 
+}
+
+.dis {
+    display:grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+
+.browser {
+    padding: 10px;
+    /* margin:10px; */
+    border: 3px solid var(--primary);
+}
+
+.browser::before {
+    box-sizing: border-box;
+    font-size:14pt;
+    color:white;
+    border: 3px solid var(--primary);
+    display: inline-block;
+    content:"\2013   \2610   \2613";
+    align-self:flex-end;
+    text-align:right;
+    background-color: purple;
+    width:calc((90% - 31px) /2);
+    margin:auto;
+    position: absolute;
+    transform: translate(-13px, -30px);
+}
 
 
 
