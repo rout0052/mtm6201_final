@@ -61,7 +61,7 @@
 
       <section class="container-fluid" id="filters">
         <div class="row">
-          <a class="toggle" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <a class="toggle" data-bs-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
             <h4>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
@@ -70,12 +70,45 @@
 
           </a>
           
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+          <div class="collapse" id="collapseFilters">
+            <div class="card card-body filter-list" id="myBtnContainer" style="display:block;">
+              <h5>Categories</h5>
+              <div class="filter-item">
+                <input type="radio" onclick="filterSelection('all')" name="categories" id="show-all" checked></input>
+                <label for="show-all">Show All</label>
+              </div>
+
+              <div class="filter-item">
+                <input class="btn" type="radio" name="categories" onclick="filterSelection('webdev')" id="webdev"></input>
+                <label for="webdev">Web Development & Design</label>
+              </div>
+
+              <div class="filter-item">
+                <input class="btn" type="radio" onclick="filterSelection('illustration')" name="categories" id="illustration"></input>
+                <label for="illustration">Digital Illustration</label>
+              </div>
+
+              <div class="filter-item">
+                <input class="btn" type="radio" onclick="filterSelection('graphics')" name="categories" id="ui-graphics"></input>
+                <label for="ui-graphics">User Interface & Graphic Design</label>
+              </div>
+              <div class="filter-item">
+                <input class="btn" type="radio" onclick="filterSelection('animation')" name="categories" id="animation"></input>
+                <label for="animation">Animation (2D & 3D)</label>
+              </div>
+              <div class="filter-item">
+                <input class="btn" type="radio" onclick="filterSelection('video')" name="categories" id="videography"></input>
+                <label for="videography">Videography & Editing</label>
+              </div>              
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="pieces">
+        <div></div>
+        <div></div>
+        <div></div>
       </section>
     </main>
 
@@ -117,6 +150,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!-- Bootstrap Script -->
+
+    <script src="scripts/filter.js"></script> <!-- Filter Script by W3 Schools -->
 </body>
 
 </html>
