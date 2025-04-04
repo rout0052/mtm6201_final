@@ -40,6 +40,11 @@ section {
     margin-top:40px;
 }
 
+.row {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 a:link {
     color: var(--link-color);
     
@@ -137,7 +142,8 @@ footer img.icon {
 }
 
 footer .bytez-logo {
-    height:70px;
+    height:50px;
+    /* width: 200px; */
 }
 
 
@@ -256,7 +262,7 @@ section#filters a.toggle h4 > svg.bi-chevron-right   {
 
 section#filters a.toggle[aria-expanded="true"] h4 > svg.bi-chevron-right   {
     transform:rotate(90deg);
-    transition: transform 0.5ss;
+    transition: transform 0.5s;
 }
 
 section#filters .card {
@@ -327,7 +333,7 @@ input[type="radio"] {
     align-self:flex-end;
     text-align:right;
     background-color: var(--primary);
-    width:calc(100% - 44px);
+    width:calc(100% - 118px);
     margin:auto;
     position: absolute;
     transform: translate(-13px, -30px);
@@ -389,6 +395,7 @@ section#pieces img.thumbnail {
 
     .footer-dark {
         text-align:start;
+        justify-content: space-around;
     }
 
     footer div.socials {
@@ -464,7 +471,7 @@ section#pieces img.thumbnail {
     }
 
     .browser::before { 
-        width:calc(35% - 13.5px);
+        width:calc(35% - 49.5px);
         transform: translate(-13px, -30px);
     }
     
