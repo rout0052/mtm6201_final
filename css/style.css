@@ -24,6 +24,7 @@ body {
 h1 {
     font-family: kallisto, sans-serif; 
     font-weight:900;
+    text-align: center;
 }
 
 h2 {
@@ -245,6 +246,10 @@ section#contact-blurb div.socials a:first-child, section#contact-blurb div.socia
 
 /* PORTFOLIO: FILTERS SECTION */
 
+section#portfolio-header {
+    text-align: center;
+}
+
 section#filters a.toggle h4 > svg.bi-chevron-right   {
     transition: transform 0.5s;
 }
@@ -263,6 +268,30 @@ section#filters .card {
 input[type="radio"] {
     accent-color: var(--secondary); 
 }
+.pagination {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom:40px;
+}
+
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    /* margin:auto; */
+  
+  }
+  
+  .pagination a.active {
+    background-color: var(--link-color);
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
 
 .dis {
     display:grid;
@@ -271,10 +300,21 @@ input[type="radio"] {
     margin: 10px;
 }
 
+/* Not displayed by default - the 'show' class is added by the script to allow for filtering */
+.filterDiv {
+    display:none;
+}
+
+.show {
+    display: block;
+}
+
 .browser {
     padding: 10px;
-    /* margin:10px; */
+    margin:10px;
+    margin-top: 40px;
     border: 3px solid var(--primary);
+    
 }
 
 .browser::before {
@@ -286,11 +326,20 @@ input[type="radio"] {
     content:"\2013   \2610   \2613";
     align-self:flex-end;
     text-align:right;
-    background-color: purple;
-    width:calc((90% - 31px) /2);
+    background-color: var(--primary);
+    width:calc(100% - 44px);
     margin:auto;
     position: absolute;
     transform: translate(-13px, -30px);
+}
+
+section#pieces img.thumbnail {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+
 }
 
 
@@ -300,10 +349,44 @@ input[type="radio"] {
 
 /* sm Screen Breakpoint (Tablet) */
 @media screen and (min-width: 576px) {
-    section#welcome {
+    section#welcome, section#welcome h1 {
         text-align: left;
     }
     
+    section#portfolio-blurb div.port-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section#portfolio-blurb div.port-categories > a.port-button:first-child {
+        grid-column: 1 / span 2;
+    }
+
+    .pagination {
+        margin-left:22px;
+        margin-right: 10px;
+    }
+    .pagination span {
+        background: #fff;
+        padding: 0 15px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .pagination:before {
+        background: var(--link-color);
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+          top: 50%;
+        width: calc(100% - 40px);
+        margin:auto;
+      }
+      
+    .pagination:before {
+        left: 0;
+    }
+
+
     .footer-dark {
         text-align:start;
     }
@@ -334,7 +417,6 @@ input[type="radio"] {
     }
     .wrapper {
         width: 75%;
-        height:100%;
         max-width: 1200px;
         
         
@@ -353,21 +435,11 @@ input[type="radio"] {
         border-left: none; 
     }
 
-
-    /* section#mission {
-        text-align: left;
-    } */
+    
 
     section#welcome div:nth-child(2), section#mission div:nth-child(2) {
         align-self:center;
         
-    }
-
-    section#portfolio-blurb div.port-categories {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    section#portfolio-blurb div.port-categories > a.port-button:first-child {
-        grid-column: 1 / span 2;
     }
 
     section#mission div.masonry .brick:nth-child(1) {
@@ -378,6 +450,23 @@ input[type="radio"] {
         align-self:self-end;
     } 
 
+    section#pieces div.row > div:nth-child(2) {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:20px;
+        
+    }
+
+    .browser {
+        /* margin:none;
+        padding:none; */
+        width: 95%;
+    }
+
+    .browser::before { 
+        width:calc(35% - 13.5px);
+        transform: translate(-13px, -30px);
+    }
     
     footer .bytez-logo {
         height:50px;
