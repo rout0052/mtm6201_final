@@ -23,7 +23,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
@@ -51,27 +51,32 @@
     </header>
 
     <main>
-      <section class="container-fluid" id="portfolio-header">
+      <section class="container-fluid header" id="portfolio-header">
         <div class="row">
           <h1>Portfolio</h1>
-          <p class="h4">Browse my creative endeavors! There is a huge variety of stuff, so feel free to use the filter system to look for specific content!</p>
+          <p class="h4">Browse my creative endeavors! There is a huge variety of stuff, so feel free to use the filter
+            system to look for specific content!</p>
         </div>
       </section>
 
 
       <section class="container-fluid" id="filters">
         <div class="row">
-          <a class="toggle" data-bs-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false" aria-controls="collapseFilters">
+          <a class="toggle" data-bs-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false"
+            aria-controls="collapseFilters">
             <h4>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>
-              Filters<i class="bi bi-filter"></i></h4>
+              Filters<i class="bi bi-filter"></i>
+            </h4>
 
           </a>
-          
+
           <div class="collapse" id="collapseFilters">
-            <div class="card card-body filter-list" id="myBtnContainer" style="display:block;">
+            <div class="card card-body filter-list" id="myBtnContainer">
               <h5>Categories</h5>
               <div class="filter-item">
                 <input type="radio" onclick="filterSelection('all')" name="categories" id="show-all" checked></input>
@@ -79,27 +84,32 @@
               </div>
 
               <div class="filter-item">
-                <input class="btn" type="radio" name="categories" onclick="filterSelection('webdev')" id="webdev"></input>
+                <input class="btn" type="radio" name="categories" onclick="filterSelection('webdev')"
+                  id="webdev"></input>
                 <label for="webdev">Web Development & Design</label>
               </div>
 
               <div class="filter-item">
-                <input class="btn" type="radio" onclick="filterSelection('illustration')" name="categories" id="illustration"></input>
+                <input class="btn" type="radio" onclick="filterSelection('illustration')" name="categories"
+                  id="illustration"></input>
                 <label for="illustration">Digital Illustration</label>
               </div>
 
               <div class="filter-item">
-                <input class="btn" type="radio" onclick="filterSelection('graphics')" name="categories" id="ui-graphics"></input>
+                <input class="btn" type="radio" onclick="filterSelection('graphics')" name="categories"
+                  id="ui-graphics"></input>
                 <label for="ui-graphics">User Interface & Graphic Design</label>
               </div>
               <div class="filter-item">
-                <input class="btn" type="radio" onclick="filterSelection('animation')" name="categories" id="animation"></input>
+                <input class="btn" type="radio" onclick="filterSelection('animation')" name="categories"
+                  id="animation"></input>
                 <label for="animation">Animation (2D & 3D)</label>
               </div>
               <div class="filter-item">
-                <input class="btn" type="radio" onclick="filterSelection('video')" name="categories" id="videography"></input>
+                <input class="btn" type="radio" onclick="filterSelection('video')" name="categories"
+                  id="videography"></input>
                 <label for="videography">Videography & Editing</label>
-              </div>              
+              </div>
             </div>
           </div>
         </div>
@@ -116,120 +126,104 @@
               <a href="#" aria-label="Next">&raquo;</a>
             </span>
           </nav>
-        <div>
-          <div class="browser col-xs-12 col-md-6 filterDiv video">
-            <picture>
-              <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/storyboarding-thumbnail_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/storyboarding-thumbnail_800.jpg" alt="">
-            </picture>
-            <h5>The Art Of Storyboarding</h5>
-            <p>The final project for Intro to Videography explores the importance of storyboarding in video production.</p>
-          </div>
-          
-          <div class="browser col-xs-12 col-md-6 filterDiv animation">
-            <picture>
-              <source srcset="images/portfolio/rantly-thumbnail_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/rantly-thumbnail_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/rantly-thumbnail_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/rantly-thumbnail_800.jpg" alt="">
-            </picture>
-            <h5>Rantly Productions</h5>
-            <p>In parody of the Pixar lamp, and homage to my childhood “production” company, I made my own animation of my cane bouncing on the screen. </p>
-          </div>
+          <div>
+            <div class="browser col-xs-12 col-md-6 filterDiv video">
+              <picture>
+                <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/storyboarding-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/storyboarding-thumbnail_800.jpg" alt="">
+              </picture>
+              <h5>The Art Of Storyboarding</h5>
+              <p>The final project for Intro to Videography explores the importance of storyboarding in video
+                production.</p>
+            </div>
 
-          <div class="browser col-xs-12 col-md-6 filterDiv illustration graphics">
-            <picture>
-              <source srcset="images/portfolio/zinejam2023_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/zinejam2023_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/zinejam2023_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/zinejam2023_800.jpg" alt="">
-            </picture>
-            <h5>D20 Zine Jam 2023</h5>
-            <p>In 2023, I co-ran a zine of works about disabled characters in Dropout’s Dimension 20, as a part of the annual D20 Zine Jam for charity.</p>
-          </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv animation">
+              <picture>
+                <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/rantly-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/rantly-thumbnail_800.jpg" alt="">
+              </picture>
+              <h5>Rantly Productions</h5>
+              <p>In parody of the Pixar lamp, and homage to my childhood “production” company, I made my own animation
+                of my cane bouncing on the screen. </p>
+            </div>
 
-          <div class="browser col-xs-12 col-md-6 filterDiv webdev graphics">
-            <picture>
-              <source srcset="images/portfolio/grassroots-thumbnail_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/grassroots-thumbnail_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/grassroots-thumbnail_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/grassroots-thumbnail_800.jpg" alt="">
-            </picture>
-            <h5>Grassroots Multimedia</h5>
-            <p>Through Algonquin College, my class was paired with the company Grassroots Multimedia to create a new brand identity and website in teams of five.</p>
-          </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv illustration graphics">
+              <picture>
+                <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/zinejam2023_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/zinejam2023_800.jpg" alt="">
+              </picture>
+              <h5>D20 Zine Jam 2023</h5>
+              <p>In 2023, I co-ran a zine of works about disabled characters in Dropout’s Dimension 20, as a part of the
+                annual D20 Zine Jam for charity.</p>
+            </div>
 
-          <div class="browser col-xs-12 col-md-6 filterDiv graphics">
-            <picture>
-              <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/celestial-dining-thumbnail_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/celestial-dining-thumbnail_800.jpg" alt="">
-            </picture>
-            <h5>Celestial Dining</h5>
-            <p>For my Design Processes class, we were tasked with coming up with a restaurant idea, and creating a full brand identity for it.</p>
-          </div>
-          <div class="browser col-xs-12 col-md-6 filterDiv webdev">
-            <picture>
-              <source srcset="images/portfolio/hats4cats_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/hats4cats_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/hats4cats_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/hats4cats_800.jpg" alt="">
-            </picture>
-            <h5>Drupal: Hats 4 Cats</h5>
-            <p>While learning the Drupal content management system, I made a site for the (sadly, fake) charity "Hats 4 Cats"</p>
-          </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev graphics">
+              <picture>
+                <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/grassroots-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/grassroots-thumbnail_800.jpg" alt="">
+              </picture>
+              <h5>Grassroots Multimedia</h5>
+              <p>Through Algonquin College, my class was paired with the company Grassroots Multimedia to create a new
+                brand identity and website in teams of five.</p>
+            </div>
 
-          <div class="browser col-xs-12 col-md-6 filterDiv animation">
-            <picture>
-              <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/crowrigami-thumbnail_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/crowrigami-thumbnail_800.jpg" alt="">
-            </picture>
-            <h5>Crowrigami Takes Flight</h5>
-            <p>Using Blender 3D I wanted to transfer real life origami into 3D animation with shape keys. Inspired by the podcast Trials & Trebuchets. </p>
-          </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv graphics">
+              <picture>
+                <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/celestial-dining-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/celestial-dining-thumbnail_800.jpg" alt="">
+              </picture>
+              <h5>Celestial Dining</h5>
+              <p>For my Design Processes class, we were tasked with coming up with a restaurant idea, and creating a
+                full brand identity for it.</p>
+            </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev">
+              <picture>
+                <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/hats4cats_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/hats4cats_800.jpg" alt="">
+              </picture>
+              <h5>Drupal: Hats 4 Cats</h5>
+              <p>While learning the Drupal content management system, I made a site for the (sadly, fake) charity "Hats
+                4 Cats"</p>
+            </div>
 
-          <div class="browser col-xs-12 col-md-6 filterDiv webdev">
-            <picture>
-              <source srcset="images/portfolio/the-system_400.jpg"
-                      media="(min-width: 768px)" />
-              <source srcset="images/portfolio/the-system_800.jpg"
-                      media="(min-width: 576px)" />
-              <source srcset="images/portfolio/the-system_400.jpg"
-                      media="(min-width: 1px)" />
-              <img class="thumbnail" src="images/portfolio/the-system_800.jpg" alt="">
-            </picture>
-            <h5>The System</h5>
-            <p>The midterm final for Web Development II, this assignment had us create a one page website about space with a focus on accessibility, pseudo-selectors, and animations</p>
-          </div>
+            <div class="browser col-xs-12 col-md-6 filterDiv animation">
+              <picture>
+                <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/crowrigami-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/crowrigami-thumbnail_800.jpg" alt="">
+              </picture>
+              <h5>Crowrigami Takes Flight</h5>
+              <p>Using Blender 3D I wanted to transfer real life origami into 3D animation with shape keys. Inspired by
+                the podcast Trials & Trebuchets. </p>
+            </div>
+
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev">
+              <picture>
+                <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 768px)" />
+                <source srcset="images/portfolio/the-system_800.jpg" media="(min-width: 576px)" />
+                <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 1px)" />
+                <img class="thumbnail" src="images/portfolio/the-system_800.jpg" alt="">
+              </picture>
+              <h5>The System</h5>
+              <p>The midterm final for Web Development II, this assignment had us create a one page website about space
+                with a focus on accessibility, pseudo-selectors, and animations</p>
+            </div>
 
 
-        </div>
+          </div>
           <nav class="pagination" aria-label="Page navigation">
             <span>
               <a href="#" aria-label="Previous">&laquo;</a>
@@ -240,41 +234,45 @@
             </span>
           </nav>
         </div>
-        
+
       </section>
     </main>
 
     <footer class="footer footer-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <a href="index.html">
-              <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
-            </a>
-            <ul class="unstyled p-0">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                  <a href="index.html">
+                      <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo"
+                          alt="logo for 'tarobytez'">
+                  </a>
+                  <ul class="unstyled p-0">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                  </ul>
+              </div>
 
-          <div class="col-xs-12 col-sm-2 socials">
-            <a href="https://github.com/rout0052"><img class="icon"
-                src="images/general-assets/social-icons/github-icon-white.svg" ></a>
-            <a href="https://tarobytez.itch.io/"><img class="icon"
-                src="images/general-assets/social-icons/itchio-icon-white.svg" ></a>
-            <a href="https://www.linkedin.com/in/taro-routly/"><img class="icon"
-                src="images/general-assets/social-icons/linkedin-icon-white.svg" ></a>
-            <a href="https://www.instagram.com/tarobytez/"><img class="icon"
-                src="images/general-assets/social-icons/instagram-icon-white.svg" ></a>
-          </div>
+              <div class="col-xs-12 col-sm-3 offset-sm-2 socials">
+                  <a href="https://github.com/rout0052"><img class="icon"
+                          src="images/general-assets/social-icons/github-icon-white.svg" target="_blank"></a>
+                  <a href="https://tarobytez.itch.io/"><img class="icon"
+                          src="images/general-assets/social-icons/itchio-icon-white.svg" target="_blank"></a>
+                  <a href="https://www.linkedin.com/in/taro-routly/"><img class="icon"
+                          src="images/general-assets/social-icons/linkedin-icon-white.svg" target="_blank"></a>
+                  <a href="https://www.instagram.com/tarobytez/"><img class="icon"
+                          src="images/general-assets/social-icons/instagram-icon-white.svg" target="_blank"></a>
+              </div>
 
-          <div class="col-xs-12 h5">
-            <p>Copyright © Taro Routly 2025</p>
+              <div class="col-xs-12 h5">
+                  <p>Copyright © Taro Routly 2025</p>
+              </div>
           </div>
-        </div>
       </div>
-    </footer>
+  </footer>
+
+    <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg"><i
+        class="bi bi-chevron-up"></i></a>
 
   </div>
 
@@ -283,7 +281,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!-- Bootstrap Script -->
 
-    <script src="scripts/filter.js"></script> <!-- Filter Script by W3 Schools -->
+  <script src="scripts/filter.js"></script> <!-- Filter Script by W3 Schools -->
 </body>
 
 </html>
