@@ -57,15 +57,15 @@
 
 /* line 10, src/scss/components/_button.scss */
 .kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 0 5px #939ba2, 2px 2.5px 4px #adb5bd, 0 -1px 2.5px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 0 5px #6B509D, 2px 2.5px 4px #adb5bd, 0 -1px 2.5px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
 /* line 239, src/scss/abstracts/_mixins.scss */
 .kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 10, src/scss/components/_button.scss */
@@ -192,15 +192,15 @@
 
 /* line 21, src/scss/components/_button.scss */
 .kbc-button-xxs.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
 /* line 239, src/scss/abstracts/_mixins.scss */
 .kbc-button-xxs.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 21, src/scss/components/_button.scss */
@@ -327,15 +327,15 @@
 
 /* line 21, src/scss/components/_button.scss */
 .kbc-button-xs.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
 /* line 239, src/scss/abstracts/_mixins.scss */
 .kbc-button-xs.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 21, src/scss/components/_button.scss */
@@ -462,15 +462,15 @@
 
 /* line 21, src/scss/components/_button.scss */
 .kbc-button-sm.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 2px 1.5px 4px #adb5bd, 0 -1px 1.5px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 2px 1.5px 4px #adb5bd, 0 -1px 1.5px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
 /* line 239, src/scss/abstracts/_mixins.scss */
 .kbc-button-sm.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 21, src/scss/components/_button.scss */
@@ -597,15 +597,15 @@
 
 /* line 21, src/scss/components/_button.scss */
 .kbc-button-lg.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 0 5px #939ba2, 0 6px #939ba2, 0 7px #939ba2, 0 8px #939ba2, 2px 4px 4px #adb5bd, 0 -1px 4px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 0 5px #6B509D, 0 6px #6B509D, 0 7px #6B509D, 0 8px #6B509D, 2px 4px 4px #adb5bd, 0 -1px 4px #adb5bd;
+  background-color: #926dd6;
+  border-color: red;
   color: #f8f9fa;
 }
 
 /* line 239, src/scss/abstracts/_mixins.scss */
 .kbc-button-lg.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 21, src/scss/components/_button.scss */
@@ -840,9 +840,9 @@ a.kbc-button-primary::after {
 /* line 74, src/scss/components/_button.scss */
 button.kbc-button-secondary,
 a.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 0 5px #939ba2, 2px 2.5px 4px #adb5bd, 0 -1px 2.5px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 0 5px #6B509D, 2px 2.5px 4px #adb5bd, 0 -1px 2.5px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -852,8 +852,8 @@ a.kbc-button-secondary:hover,
 a.kbc-button-secondary:focus,
 a.kbc-button-secondary.hover,
 a.kbc-button-secondary.focus {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 2px 2px 4px #adb5bd, 0 -1px 2px #adb5bd;
-  background-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 2px 2px 4px #adb5bd, 0 -1px 2px #adb5bd;
+  background-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -861,7 +861,7 @@ a.kbc-button-secondary.focus {
 button.kbc-button-secondary:active, button.kbc-button-secondary.active,
 a.kbc-button-secondary:active,
 a.kbc-button-secondary.active {
-  background-color: #868e96;
+  background-color: #a88ade;
   box-shadow: 0 0 1px 1px #bcc1c6;
   color: #f8f9fa;
 }
@@ -869,7 +869,7 @@ a.kbc-button-secondary.active {
 /* line 201, src/scss/abstracts/_mixins.scss */
 button.kbc-button-secondary::after,
 a.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 74, src/scss/components/_button.scss */
@@ -1208,9 +1208,9 @@ a.kbc-button-xxs.kbc-button-primary::after {
 /* line 85, src/scss/components/_button.scss */
 button.kbc-button-xxs.kbc-button-secondary,
 a.kbc-button-xxs.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1220,8 +1220,8 @@ a.kbc-button-xxs.kbc-button-secondary:hover,
 a.kbc-button-xxs.kbc-button-secondary:focus,
 a.kbc-button-xxs.kbc-button-secondary.hover,
 a.kbc-button-xxs.kbc-button-secondary.focus {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 2px 0.5px 4px #adb5bd, 0 -1px 0.5px #adb5bd;
-  background-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 2px 0.5px 4px #adb5bd, 0 -1px 0.5px #adb5bd;
+  background-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1229,7 +1229,7 @@ a.kbc-button-xxs.kbc-button-secondary.focus {
 button.kbc-button-xxs.kbc-button-secondary:active, button.kbc-button-xxs.kbc-button-secondary.active,
 a.kbc-button-xxs.kbc-button-secondary:active,
 a.kbc-button-xxs.kbc-button-secondary.active {
-  background-color: #868e96;
+  background-color: #a88ade;
   box-shadow: 0 0 1px 1px #bcc1c6;
   color: #f8f9fa;
 }
@@ -1237,7 +1237,7 @@ a.kbc-button-xxs.kbc-button-secondary.active {
 /* line 201, src/scss/abstracts/_mixins.scss */
 button.kbc-button-xxs.kbc-button-secondary::after,
 a.kbc-button-xxs.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 85, src/scss/components/_button.scss */
@@ -1576,9 +1576,9 @@ a.kbc-button-xs.kbc-button-primary::after {
 /* line 85, src/scss/components/_button.scss */
 button.kbc-button-xs.kbc-button-secondary,
 a.kbc-button-xs.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1588,8 +1588,8 @@ a.kbc-button-xs.kbc-button-secondary:hover,
 a.kbc-button-xs.kbc-button-secondary:focus,
 a.kbc-button-xs.kbc-button-secondary.hover,
 a.kbc-button-xs.kbc-button-secondary.focus {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 2px 0.5px 4px #adb5bd, 0 -1px 0.5px #adb5bd;
-  background-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 2px 0.5px 4px #adb5bd, 0 -1px 0.5px #adb5bd;
+  background-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1597,7 +1597,7 @@ a.kbc-button-xs.kbc-button-secondary.focus {
 button.kbc-button-xs.kbc-button-secondary:active, button.kbc-button-xs.kbc-button-secondary.active,
 a.kbc-button-xs.kbc-button-secondary:active,
 a.kbc-button-xs.kbc-button-secondary.active {
-  background-color: #868e96;
+  background-color: #a88ade;
   box-shadow: 0 0 1px 1px #bcc1c6;
   color: #f8f9fa;
 }
@@ -1605,7 +1605,7 @@ a.kbc-button-xs.kbc-button-secondary.active {
 /* line 201, src/scss/abstracts/_mixins.scss */
 button.kbc-button-xs.kbc-button-secondary::after,
 a.kbc-button-xs.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 85, src/scss/components/_button.scss */
@@ -1944,9 +1944,9 @@ a.kbc-button-sm.kbc-button-primary::after {
 /* line 85, src/scss/components/_button.scss */
 button.kbc-button-sm.kbc-button-secondary,
 a.kbc-button-sm.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 2px 1.5px 4px #adb5bd, 0 -1px 1.5px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 2px 1.5px 4px #adb5bd, 0 -1px 1.5px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1956,8 +1956,8 @@ a.kbc-button-sm.kbc-button-secondary:hover,
 a.kbc-button-sm.kbc-button-secondary:focus,
 a.kbc-button-sm.kbc-button-secondary.hover,
 a.kbc-button-sm.kbc-button-secondary.focus {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
-  background-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 2px 1px 4px #adb5bd, 0 -1px 1px #adb5bd;
+  background-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -1965,7 +1965,7 @@ a.kbc-button-sm.kbc-button-secondary.focus {
 button.kbc-button-sm.kbc-button-secondary:active, button.kbc-button-sm.kbc-button-secondary.active,
 a.kbc-button-sm.kbc-button-secondary:active,
 a.kbc-button-sm.kbc-button-secondary.active {
-  background-color: #868e96;
+  background-color: #a88ade;
   box-shadow: 0 0 1px 1px #bcc1c6;
   color: #f8f9fa;
 }
@@ -1973,7 +1973,7 @@ a.kbc-button-sm.kbc-button-secondary.active {
 /* line 201, src/scss/abstracts/_mixins.scss */
 button.kbc-button-sm.kbc-button-secondary::after,
 a.kbc-button-sm.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 85, src/scss/components/_button.scss */
@@ -2312,9 +2312,9 @@ a.kbc-button-lg.kbc-button-primary::after {
 /* line 85, src/scss/components/_button.scss */
 button.kbc-button-lg.kbc-button-secondary,
 a.kbc-button-lg.kbc-button-secondary {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 0 5px #939ba2, 0 6px #939ba2, 0 7px #939ba2, 0 8px #939ba2, 2px 4px 4px #adb5bd, 0 -1px 4px #adb5bd;
-  background-color: #6c757d;
-  border-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 0 5px #6B509D, 0 6px #6B509D, 0 7px #6B509D, 0 8px #6B509D, 2px 4px 4px #adb5bd, 0 -1px 4px #adb5bd;
+  background-color: #926dd6;
+  border-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -2324,8 +2324,8 @@ a.kbc-button-lg.kbc-button-secondary:hover,
 a.kbc-button-lg.kbc-button-secondary:focus,
 a.kbc-button-lg.kbc-button-secondary.hover,
 a.kbc-button-lg.kbc-button-secondary.focus {
-  box-shadow: 0 0 #939ba2, 0 0px #939ba2, 0 1px #939ba2, 0 2px #939ba2, 0 3px #939ba2, 0 4px #939ba2, 0 5px #939ba2, 0 6px #939ba2, 0 7px #939ba2, 2px 3.5px 4px #adb5bd, 0 -1px 3.5px #adb5bd;
-  background-color: #868e96;
+  box-shadow: 0 0 #6B509D, 0 0px #6B509D, 0 1px #6B509D, 0 2px #6B509D, 0 3px #6B509D, 0 4px #6B509D, 0 5px #6B509D, 0 6px #6B509D, 0 7px #6B509D, 2px 3.5px 4px #ded3f3, 0 -1px 3.5px #ded3f3;
+  background-color: #a88ade;
   color: #f8f9fa;
 }
 
@@ -2333,7 +2333,7 @@ a.kbc-button-lg.kbc-button-secondary.focus {
 button.kbc-button-lg.kbc-button-secondary:active, button.kbc-button-lg.kbc-button-secondary.active,
 a.kbc-button-lg.kbc-button-secondary:active,
 a.kbc-button-lg.kbc-button-secondary.active {
-  background-color: #868e96;
+  background-color: #a88ade;
   box-shadow: 0 0 1px 1px #bcc1c6;
   color: #f8f9fa;
 }
@@ -2341,7 +2341,7 @@ a.kbc-button-lg.kbc-button-secondary.active {
 /* line 201, src/scss/abstracts/_mixins.scss */
 button.kbc-button-lg.kbc-button-secondary::after,
 a.kbc-button-lg.kbc-button-secondary::after {
-  border-color: #a1a8ae;
+  border-color: #7557ab;
 }
 
 /* line 85, src/scss/components/_button.scss */
