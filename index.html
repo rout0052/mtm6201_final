@@ -1,3 +1,10 @@
+<!-- 
+--
+-- This website was created by Taro Routly for Algonquin College's Web Development II (MTM6201)
+-- Due Date: April 11th 2025
+-- 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,29 +28,40 @@
 </head>
 
 <body>
+    <!-- Wrapper Class for body content -->
     <div class="wrapper">
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top">
+        <!-- Header with ARIA landmark role 'banner' - redundant role added to show knowledge of ARIA roles  -->
+        <header role="banner">
+            <!-- Nav with Bootstrap classes that customize it to expand on md size devices, with light text, and the primary colour as background. ID=top for jump to top button.  ARIA landmark role "navigation" - redundant role added to show knowledge of ARIA roles  -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top" role="navigation">
+                <!-- Container fluid class used throughout - I chose to use container fluid to have a full width instead of fixed width.-->
                 <div class="container-fluid">
-
+                    <!-- Navbar-brand that is a link to homepage with a svg of my logo -->
                     <a class="navbar-brand" href="index.html">
                         <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo"
                             alt="logo for 'tarobytez'">
                     </a>
+
+                    <!-- This hamburger menu collapsing menu was made using the building blocks provided on Bootstrap's website - the button of a hamburger menu connected via the attributes of the tag matching IDs, etc -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- This span adds the hamburger menu -->
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <!-- This div is the content that is collapsed. Once again, I used the Bootstrap site building blocks to put this together. -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- The last 3 classes on this ul refer to spacing: ms-auto = margin start auto. mb-2 = margin bottom with Bootstrap's default '2' spacer size. mb-lg-0 = margin bottom on large screen sizes are 0 -->
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!-- Each list item is given the class 'nav-item', with each link getting the classs 'nav-link' -->
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                                <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
                             </li>
                             <li class="nav-item">
+                                <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
@@ -52,7 +70,7 @@
             </nav>
         </header>
 
-        <main>
+        <main role="main">
             <section class="container-fluid" id="welcome">
                 <div class="row">
                     <picture class="col-xs-12 col-sm-6">
@@ -73,7 +91,7 @@
 
             <section class="container-fluid" id="mission">
                 <div class="row">
-                    <div class="masonry col-xs-12 col-md-6 order-md-2">
+                    <div class="masonry col-xs-12">
                         <picture class="brick">
                             <source srcset="images/homepage/mission/rantly_200.jpg,
                                             images/homepage/mission/rantly_300.jpg 1.5x,
@@ -81,7 +99,7 @@
                             <source srcset="images/homepage/mission/rantly_120.jpg,
                                             images/homepage/mission/rantly_180.jpg 1.5x,
                                             images/homepage/mission/rantly_240.jpg 2x" media="(min-width:1px)">
-                            <img class="img-fluid" src="images/homepage/mission/rantly_400.jpg" 
+                            <img class="img-fluid" src="images/homepage/mission/rantly_400.jpg"
                                 alt="A light blue background with the word 'RANTLY' spelt in 3D letters, with a black metal cane in front.">
                         </picture>
 
@@ -119,7 +137,7 @@
                         </picture>
                     </div>
 
-                    <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12">
                         <h2>Our Mission</h2>
                         <p>The intersection of art and technology is an unending bid of excitement that we at tarobytez
                             aim to explore the depths of. Through websites, animation, illustrations and games, we
@@ -286,55 +304,65 @@
         </main>
 
 
-        <footer class="footer footer-dark">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <a href="index.html">
-                            <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo"
-                                alt="logo for 'tarobytez'">
-                        </a>
-                        <ul class="unstyled p-0">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-3 offset-sm-2 socials">
-                        <a href="https://github.com/rout0052" target="_blank">
-                            <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"
-                                alt="github logo" aria-label="link to github">
-                        </a>
-                        <a href="https://tarobytez.itch.io/" target="_blank">
-                            <img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg"
-                                alt="itch.io logo" aria-label="link to itch.io">
-                        </a>
-                        <a href="https://www.linkedin.com/in/taro-routly/" target="_blank">
-                            <img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"
-                                alt="linkedin logo" aria-label="link to linkedin">
-                        </a>
-                        <a href="https://www.instagram.com/tarobytez/" target="_blank">
-                            <img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg"
-                                alt="instagram logo" aria-label="link to instagram">
-                        </a>
-                    </div>
-
-                    <div class="col-xs-12 h5">
-                        <p>Copyright © Taro Routly 2025</p>
-                    </div>
-                </div>
+    <!-- Footer class for Bootstrap. footer-dark class made for my personal styling. Footer with ARIA landmark role 'contentinfo' - redundant role added to show knowledge of ARIA roles   -->
+    <footer class="footer footer-dark" role="contentinfo">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Full width on mobile, half width on tablet sizes and up -->
+            <div class="col-xs-12 col-sm-6">
+              <a href="index.html">
+                <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
+              </a>
+              <!-- Unstyled list, with no padding -->
+              <ul class="unstyled p-0">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
             </div>
-        </footer>
-
-        <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg"><i
-                class="bi bi-chevron-up"></i></a>
-
+  
+            <!-- Column Breakdown: Mobile = 12 columns. Tablet-Small Desktop = 4 columns, offset by 2 to put at the end. Large Desktop = 3 columns, offset by 3 to put at the end. -->
+            <div class="col-xs-12 col-sm-4 col-lg-3 offset-sm-2 offset-lg-3 socials">
+              <!-- Each socials link includes: href to external social media link, class that uses the keyboard button library to style, target="_blank" to open in a new tab.  -->
+              <a href="https://github.com/rout0052" target="_blank">
+                <!-- Inside the socials links, there is an svg image showing the social icon, with an alt and aria-label for accessibility, and the class 'icon' for styling -->
+                <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg" alt="github logo"
+                  aria-label="link to github">
+              </a>
+              <a href="https://tarobytez.itch.io/" target="_blank">
+                <img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg" alt="itch.io logo"
+                  aria-label="link to itch.io">
+              </a>
+              <a href="https://www.linkedin.com/in/taro-routly/" target="_blank">
+                <img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg" alt="linkedin logo"
+                  aria-label="link to linkedin">
+              </a>
+              <a href="https://www.instagram.com/tarobytez/" target="_blank">
+                <img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg" alt="instagram logo"
+                  aria-label="link to instagram">
+              </a>
+            </div>
+            <!-- On all sizes, copyright information takes up all 12 columns (on its own line) -->
+            <div class="col-xs-12">
+              <p class="h5">Copyright © Taro Routly 2025</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- Jump To Top Button - styled with keyboard button library. -->
+      <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg">
+        <!-- Bootstrap icon - chevron up symbol using the <i> tag, commonly used for icons.  -->
+        <i class="bi bi-chevron-up"></i>
+      </a>
+  
+      <!-- End of wrapper and end of visual content. -->
     </div>
 
 
 
     <!-- SCRIPTS - DO NOT TOUCH -->
+        <!-- Scripts are put at the bottom of the page so that it doesn't prevent the loading of the content.  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script> <!-- Bootstrap Script -->

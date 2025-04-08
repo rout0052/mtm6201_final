@@ -1,3 +1,10 @@
+<!-- 
+--
+-- This website was created by Taro Routly for Algonquin College's Web Development II (MTM6201)
+-- Due Date: April 11th 2025
+-- 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,20 +28,31 @@
 </head>
 
 <body>
+  <!-- Wrapper Class for body content -->
   <div class="wrapper">
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top">
+    <!-- Header with ARIA landmark role 'banner' - redundant role added to show knowledge of ARIA roles  -->
+    <header role="banner">
+      <!-- Nav with Bootstrap classes that customize it to expand on md size devices, with light text, and the primary colour as background. ID=top for jump to top button.  ARIA landmark role "navigation" - redundant role added to show knowledge of ARIA roles  -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top" role="navigation">
+        <!-- Container fluid class used throughout - I chose to use container fluid to have a full width instead of fixed width.-->
         <div class="container-fluid">
+          <!-- Navbar-brand that is a link to homepage with a svg of my logo -->
           <a class="navbar-brand" href="index.html">
             <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
           </a>
+
+          <!-- This hamburger menu collapsing menu was made using the building blocks provided on Bootstrap's website - the button of a hamburger menu connected via the attributes of the tag matching IDs, etc -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
+            <!-- This span adds the hamburger menu -->
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- This div is the content that is collapsed. Once again, I used the Bootstrap site building blocks to put this together. -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- The last 3 classes on this ul refer to spacing: ms-auto = margin start auto. mb-2 = margin bottom with Bootstrap's default '2' spacer size. mb-lg-0 = margin bottom on large screen sizes are 0 -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- Each list item is given the class 'nav-item', with each link getting the classs 'nav-link' -->
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
@@ -42,6 +60,7 @@
                 <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
+                <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
@@ -50,11 +69,12 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container-fluid header" id="portfolio-header">
+    <main role="main">
+      <section class="container-fluid pg-header">
         <div class="row">
           <h1>Portfolio</h1>
-          <p class="h4">Browse my creative endeavors! There is a huge variety of stuff, so feel free to use the filter
+          <p class="h4 text-center">Browse my creative endeavors! There is a huge variety of stuff, so feel free to use
+            the filter
             system to look for specific content!</p>
         </div>
       </section>
@@ -145,7 +165,8 @@
                 <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/rantly-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/rantly-thumbnail_800.jpg" alt="A light blue background with the word 'RANTLY' spelt in 3D letters, with a black metal cane in front.">
+                <img class="thumbnail" src="images/portfolio/rantly-thumbnail_800.jpg"
+                  alt="A light blue background with the word 'RANTLY' spelt in 3D letters, with a black metal cane in front.">
               </picture>
               <h5>Rantly Productions</h5>
               <p>In parody of the Pixar lamp, and homage to my childhood “production” company, I made my own animation
@@ -157,7 +178,8 @@
                 <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/zinejam2023_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/zinejam2023_800.jpg" alt="A background of the disability pride flag (a dark grey flag with 5 diagonal stripes of red, yellow, white, blue, and green), the stripes as trails coming out of a purple twenty sided dice with emphasis on the '20'. The text reads 'Dimension Disability'">
+                <img class="thumbnail" src="images/portfolio/zinejam2023_800.jpg"
+                  alt="A background of the disability pride flag (a dark grey flag with 5 diagonal stripes of red, yellow, white, blue, and green), the stripes as trails coming out of a purple twenty sided dice with emphasis on the '20'. The text reads 'Dimension Disability'">
               </picture>
               <h5>D20 Zine Jam 2023</h5>
               <p>In 2023, I co-ran a zine of works about disabled characters in Dropout’s Dimension 20, as a part of the
@@ -169,7 +191,8 @@
                 <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/grassroots-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/grassroots-thumbnail_800.jpg" alt="On the left is an image of a purple flower. On the right, there is text that reads 'Grassroots Multimedia. // A New Story'. Beneath that is a box with a cubed mug illustration and the text 'A Proposal by TEA3' and the names of the contributors 'Taro Routly, Erica Hu, Amelia Chetelat, Aymen Fahd'">
+                <img class="thumbnail" src="images/portfolio/grassroots-thumbnail_800.jpg"
+                  alt="On the left is an image of a purple flower. On the right, there is text that reads 'Grassroots Multimedia. // A New Story'. Beneath that is a box with a cubed mug illustration and the text 'A Proposal by TEA3' and the names of the contributors 'Taro Routly, Erica Hu, Amelia Chetelat, Aymen Fahd'">
               </picture>
               <h5>Grassroots Multimedia</h5>
               <p>Through Algonquin College, my class was paired with the company Grassroots Multimedia to create a new
@@ -181,7 +204,8 @@
                 <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/celestial-dining-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/celestial-dining-thumbnail_800.jpg" alt="An illustrated logo of a constellation in the shape of a dining cloche on a starry background, with the text 'Celestial' in a sci-fi font and a star over the 'i'">
+                <img class="thumbnail" src="images/portfolio/celestial-dining-thumbnail_800.jpg"
+                  alt="An illustrated logo of a constellation in the shape of a dining cloche on a starry background, with the text 'Celestial' in a sci-fi font and a star over the 'i'">
               </picture>
               <h5>Celestial Dining</h5>
               <p>For my Design Processes class, we were tasked with coming up with a restaurant idea, and creating a
@@ -192,7 +216,8 @@
                 <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/hats4cats_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/hats4cats_800.jpg" alt="An image of a brown tabby cat in a tree wearing a yellow hardhat.">
+                <img class="thumbnail" src="images/portfolio/hats4cats_800.jpg"
+                  alt="An image of a brown tabby cat in a tree wearing a yellow hardhat.">
               </picture>
               <h5>Drupal: Hats 4 Cats</h5>
               <p>While learning the Drupal content management system, I made a site for the (sadly, fake) charity "Hats
@@ -204,7 +229,8 @@
                 <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/crowrigami-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/crowrigami-thumbnail_800.jpg" alt="A 3D origami bird made of blue paper with gold script with a rumpled paper background.">
+                <img class="thumbnail" src="images/portfolio/crowrigami-thumbnail_800.jpg"
+                  alt="A 3D origami bird made of blue paper with gold script with a rumpled paper background.">
               </picture>
               <h5>Crowrigami Takes Flight</h5>
               <p>Using Blender 3D I wanted to transfer real life origami into 3D animation with shape keys. Inspired by
@@ -216,7 +242,8 @@
                 <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/the-system_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 1px)" />
-                <img class="thumbnail" src="images/portfolio/the-system_800.jpg" alt="Text on a galaxy background that read 'The System Magazine', 'Welcome To The Solar System', and 'Take a tour around the coolest stellar system around.'">
+                <img class="thumbnail" src="images/portfolio/the-system_800.jpg"
+                  alt="Text on a galaxy background that read 'The System Magazine', 'Welcome To The Solar System', and 'Take a tour around the coolest stellar system around.'">
               </picture>
               <h5>The System</h5>
               <p>The midterm final for Web Development II, this assignment had us create a one page website about space
@@ -239,13 +266,16 @@
       </section>
     </main>
 
-    <footer class="footer footer-dark">
+    <!-- Footer class for Bootstrap. footer-dark class made for my personal styling. Footer with ARIA landmark role 'contentinfo' - redundant role added to show knowledge of ARIA roles   -->
+    <footer class="footer footer-dark" role="contentinfo">
       <div class="container-fluid">
         <div class="row">
+          <!-- Full width on mobile, half width on tablet sizes and up -->
           <div class="col-xs-12 col-sm-6">
             <a href="index.html">
               <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
             </a>
+            <!-- Unstyled list, with no padding -->
             <ul class="unstyled p-0">
               <li><a href="index.html">Home</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
@@ -253,8 +283,11 @@
             </ul>
           </div>
 
-          <div class="col-xs-12 col-sm-3 offset-sm-2 socials">
+          <!-- Column Breakdown: Mobile = 12 columns. Tablet-Small Desktop = 4 columns, offset by 2 to put at the end. Large Desktop = 3 columns, offset by 3 to put at the end. -->
+          <div class="col-xs-12 col-sm-4 col-lg-3 offset-sm-2 offset-lg-3 socials">
+            <!-- Each socials link includes: href to external social media link, class that uses the keyboard button library to style, target="_blank" to open in a new tab.  -->
             <a href="https://github.com/rout0052" target="_blank">
+              <!-- Inside the socials links, there is an svg image showing the social icon, with an alt and aria-label for accessibility, and the class 'icon' for styling -->
               <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg" alt="github logo"
                 aria-label="link to github">
             </a>
@@ -271,20 +304,25 @@
                 aria-label="link to instagram">
             </a>
           </div>
-
-          <div class="col-xs-12 h5">
-            <p>Copyright © Taro Routly 2025</p>
+          <!-- On all sizes, copyright information takes up all 12 columns (on its own line) -->
+          <div class="col-xs-12">
+            <p class="h5">Copyright © Taro Routly 2025</p>
           </div>
         </div>
       </div>
     </footer>
 
-    <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg"><i
-        class="bi bi-chevron-up"></i></a>
+    <!-- Jump To Top Button - styled with keyboard button library. -->
+    <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg">
+      <!-- Bootstrap icon - chevron up symbol using the <i> tag, commonly used for icons.  -->
+      <i class="bi bi-chevron-up"></i>
+    </a>
 
+    <!-- End of wrapper and end of visual content. -->
   </div>
 
   <!-- SCRIPTS - DO NOT TOUCH -->
+    <!-- Scripts are put at the bottom of the page so that it doesn't prevent the loading of the content.  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!-- Bootstrap Script -->
