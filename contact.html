@@ -1,3 +1,10 @@
+<!-- 
+--
+-- This website was created by Taro Routly for Algonquin College's Web Development II (MTM6201)
+-- Due Date: April 11th 2025
+-- 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,20 +28,31 @@
 </head>
 
 <body>
+  <!-- Wrapper Class for body content -->
   <div class="wrapper">
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top">
+    <!-- Header with ARIA landmark role 'banner' - redundant role added to show knowledge of ARIA roles  -->
+    <header role="banner">
+      <!-- Nav with Bootstrap classes that customize it to expand on md size devices, with light text, and the primary colour as background. ID=top for jump to top button.  ARIA landmark role "navigation" - redundant role added to show knowledge of ARIA roles  -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="top" role="navigation">
+        <!-- Container fluid class used throughout - I chose to use container fluid to have a full width instead of fixed width.-->
         <div class="container-fluid">
+          <!-- Navbar-brand that is a link to homepage with a svg of my logo -->
           <a class="navbar-brand" href="index.html">
             <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
           </a>
+
+          <!-- This hamburger menu collapsing menu was made using the building blocks provided on Bootstrap's website - the button of a hamburger menu connected via the attributes of the tag matching IDs, etc -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
+            <!-- This span adds the hamburger menu -->
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- This div is the content that is collapsed. Once again, I used the Bootstrap site building blocks to put this together. -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- The last 3 classes on this ul refer to spacing: ms-auto = margin start auto. mb-2 = margin bottom with Bootstrap's default '2' spacer size. mb-lg-0 = margin bottom on large screen sizes are 0 -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- Each list item is given the class 'nav-item', with each link getting the classs 'nav-link' -->
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
@@ -42,6 +60,7 @@
                 <a class="nav-link" href="portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
+                <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
                 <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
               </li>
             </ul>
@@ -50,42 +69,59 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container-fluid header">
+    <main role="main">
+      <!-- Main with ARIA landmark role 'main' - redundant role added to show knowledge of ARIA roles  -->
+      <!-- Container fluid for Bootstrap responsiveness.  -->
+      <section class="container-fluid">
+        <!-- Row for Bootstrap responsive layout -->
         <div class="row">
+          <!-- Page heading -->
           <h1>Contact</h1>
-          <p class="h4">Thanks for stopping by!</p>
+          <!-- 'h4' class given to paragraph tag for styling purposes. -->
+          <p class="h4 text-center">Thanks for stopping by! I would love to hear from you!</p>
         </div>
       </section>
 
-      <section class="container">
+      <section class="container-fluid">
         <div class="row">
-          <h2>Check me out across other platforms!</h2>
-          <div class="socials">
-            <a href="https://github.com/rout0052" class="kbc-button kbc-button-primary" target="_blank"><img
-                class="icon" src="images/general-assets/social-icons/github-icon-white.svg" alt="github logo"
+          <h2 class="text-center">Check me out across other platforms!</h2>
+          <div class="socials d-flex justify-content-center">
+            <!-- Each socials link includes: href to external social media link, class that uses the keyboard button library to style, target="_blank" to open in a new tab.  -->
+            <a href="https://github.com/rout0052" class="kbc-button kbc-button-primary" target="_blank">
+              <!-- Inside the socials links, there is an svg image showing the social icon, with an alt and aria-label for accessibility, and the class 'icon' for styling -->
+              <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg" alt="github logo"
                 aria-label="link to github">
             </a>
-            <a href="https://tarobytez.itch.io/" class="kbc-button kbc-button-primary" target="_blank"><img class="icon"
-                src="images/general-assets/social-icons/itchio-icon-white.svg" alt="itch.io logo"
-                aria-label="link to itch.io"></a>
-            <a href="https://www.linkedin.com/in/taro-routly/" class="kbc-button kbc-button-primary"
-              target="_blank"><img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg"
-                alt="linkedin logo" aria-label="link to linkedin"></a>
-            <a href="https://www.instagram.com/tarobytez/" class="kbc-button kbc-button-primary" target="_blank"><img
-                class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg" alt="instagram logo"
-                aria-label="link to instagram"></a>
+            <a href="https://tarobytez.itch.io/" class="kbc-button kbc-button-primary" target="_blank">
+              <img class="icon" src="images/general-assets/social-icons/itchio-icon-white.svg" alt="itch.io logo"
+                aria-label="link to itch.io">
+            </a>
+            <a href="https://www.linkedin.com/in/taro-routly/" class="kbc-button kbc-button-primary" target="_blank">
+              <img class="icon" src="images/general-assets/social-icons/linkedin-icon-white.svg" alt="linkedin logo"
+                aria-label="link to linkedin">
+            </a>
+            <a href="https://www.instagram.com/tarobytez/" class="kbc-button kbc-button-primary" target="_blank">
+              <img class="icon" src="images/general-assets/social-icons/instagram-icon-white.svg" alt="instagram logo"
+                aria-label="link to instagram">
+            </a>
           </div>
         </div>
       </section>
 
       <section class="container-fluid" id="contact-form">
         <div class="row">
-          <h2>Have a question or inquiry?</h2>
-          <h6>Note: This is not a functional form as of March 30th, 2025</h6>
-          <form action="#" type="submit">
+          <h2 class="text-center">Have a question or inquiry?</h2>
+          <!-- I added this in to prevent people trying to email me with an unavailable form, while sticking to the design plans to have a form. Styled with bootstrap classes  -->
+          <h6 class="mb-4 mt-4 text-center">***Note: This is not a functional form as of March 30th, 2025. To reach me,
+            email me at
+            <a href="mailto:taroroutly@gmail.com">taroroutly@gmail.com</a>
+          </h6>
+          <!-- Form with ARIA landmark role 'form' - redundant role added to show knowledge of ARIA roles  -->
+          <form action="#" type="submit" role="form" title="Contact Form">
             <h3>Reach out using this form!</h3>
+            <!-- mb-3 = margin-bottom size 3 -->
             <div class="mb-3">
+              <!-- Input and associated label for each field with placeholder text. -->
               <label for="fullname">Name</label>
               <input id="fullname" type="text" name="fullname" placeholder="NAME">
             </div>
@@ -101,20 +137,23 @@
               <label for="message">Message</label>
               <textarea id="message" placeholder="YOUR MESSAGE..."></textarea>
             </div>
-
+            <!-- Submit button for form styled with CSS keyboard button library -->
             <button type="submit" class="kbc-button kbc-button-primary kbc-button-lg">Submit</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer footer-dark">
+    <!-- Footer class for Bootstrap. footer-dark class made for my personal styling. Footer with ARIA landmark role 'contentinfo' - redundant role added to show knowledge of ARIA roles   -->
+    <footer class="footer footer-dark" role="contentinfo">
       <div class="container-fluid">
         <div class="row">
+          <!-- Full width on mobile, half width on tablet sizes and up -->
           <div class="col-xs-12 col-sm-6">
             <a href="index.html">
               <img src="images/general-assets/tarobytez-logo.svg" class="bytez-logo" alt="logo for 'tarobytez'">
             </a>
+            <!-- Unstyled list, with no padding -->
             <ul class="unstyled p-0">
               <li><a href="index.html">Home</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
@@ -122,8 +161,11 @@
             </ul>
           </div>
 
-          <div class="col-xs-12 col-sm-3 offset-sm-2 socials">
+          <!-- Column Breakdown: Mobile = 12 columns. Tablet-Small Desktop = 4 columns, offset by 2 to put at the end. Large Desktop = 3 columns, offset by 3 to put at the end. -->
+          <div class="col-xs-12 col-sm-4 col-lg-3 offset-sm-2 offset-lg-3 socials">
+            <!-- Each socials link includes: href to external social media link, class that uses the keyboard button library to style, target="_blank" to open in a new tab.  -->
             <a href="https://github.com/rout0052" target="_blank">
+              <!-- Inside the socials links, there is an svg image showing the social icon, with an alt and aria-label for accessibility, and the class 'icon' for styling -->
               <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg" alt="github logo"
                 aria-label="link to github">
             </a>
@@ -140,22 +182,25 @@
                 aria-label="link to instagram">
             </a>
           </div>
-
-          <div class="col-xs-12 h5">
-            <p>Copyright © Taro Routly 2025</p>
+          <!-- On all sizes, copyright information takes up all 12 columns (on its own line) -->
+          <div class="col-xs-12">
+            <p class="h5">Copyright © Taro Routly 2025</p>
           </div>
         </div>
       </div>
     </footer>
 
-    <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg"><i
-        class="bi bi-chevron-up"></i></a>
+    <!-- Jump To Top Button - styled with keyboard button library. -->
+    <a href="#top" id="jump-top" class="kbc-button kbc-button-secondary kbc-button-lg">
+      <!-- Bootstrap icon - chevron up symbol using the <i> tag, commonly used for icons.  -->
+      <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <!-- End of wrapper and end of visual content. -->
   </div>
 
-
-
-
   <!-- SCRIPTS - DO NOT TOUCH -->
+    <!-- Scripts are put at the bottom of the page so that it doesn't prevent the loading of the content.  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!-- Bootstrap Script -->
