@@ -263,17 +263,24 @@ section#contact-blurb {
 }
 
 section#contact-blurb div.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
+    display: grid;
+    grid-template-columns: 80px 80px;
+    justify-content:center;
+    gap: 5px;
 }
 
-section#contact-blurb div.socials a:first-child,
-section#contact-blurb div.socials a:nth-child(4),
-section#contact-blurb div.socials a:nth-child(5) {
-    order: 1;
+section#contact-blurb div.socials a {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
 }
+
+section#contact-blurb div.socials a:first-child {
+    grid-column: 1 / span 2;
+}
+
+
 
 
 /* PORTFOLIO PAGE */
@@ -426,6 +433,18 @@ a#jump-top {
     section#portfolio-blurb div.port-categories>a.port-button:first-child {
         grid-column: 1 / span 2;
     }
+
+    section#contact-blurb div.socials {
+        display: flex;
+    }
+
+    section#contact-blurb div.socials a:nth-child(1), div.socials a:nth-child(4), div.socials a:nth-child(5) {
+        order:1;
+    }
+
+    /* section#contact-blurb div.socials a.kbc-button-lg {
+        font-size: px;
+    } */
 
     .pagination {
         margin-left: 22px;
