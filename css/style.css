@@ -288,6 +288,11 @@ section#filters .card {
     border: none;
     border-left: var(--secondary) 2px solid;
     border-radius: 0;
+    font-size:1rem;
+}
+
+section#filters .card h5 {
+    /* font-size:1.5rem; */
 }
 
 input[type="radio"] {
@@ -393,20 +398,24 @@ a#jump-top {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    max-width: 80px;
+    max-width: 60px;
     width: 100%;
-    font-size: 3.25rem;
+    font-size: 2.5rem;
     padding: 2px;
     text-align: center;
-}
-
-a#jump-top {
-    width: 100%;
 }
 
 
 /* sm Screen Breakpoint (Tablet) */
 @media screen and (min-width: 576px) {
+    .display-2 {
+        font-size:3rem;
+    }
+
+    .h3 {
+        font-size:1.3rem;
+    }
+
 
     section#welcome,
     section#welcome h1 {
@@ -429,9 +438,16 @@ a#jump-top {
         order:1;
     }
 
-    /* section#contact-blurb div.socials a.kbc-button-lg {
-        font-size: px;
-    } */
+    section#filters a.toggle h4 {
+        font-size:1.75rem;
+    }
+
+    section#filters .card {
+        font-size:1.25rem;
+    }
+    section#filters .card h5 {
+        font-size:1.35rem;
+    }
 
     .pagination {
         margin-left: 22px;
@@ -482,6 +498,10 @@ a#jump-top {
         margin-top: 0px;
     }
 
+    a#jump-top {
+        max-width:70px;
+        font-size:3rem;
+    }
 }
 
 /* md Screen Breakpoint (Desktop) */
@@ -498,6 +518,10 @@ a#jump-top {
 
 
     }
+
+    /* .display-2 {
+        font-size:3rem;
+    } */
 
     div.navbar-collapse ul {
         justify-self: right;
@@ -537,8 +561,6 @@ a#jump-top {
     }
 
     .browser {
-        /* margin:none;
-        padding:none; */
         width: 95%;
     }
 
@@ -549,9 +571,22 @@ a#jump-top {
 
     a#jump-top {
         right: calc(12.5% + 40px);
+        max-width:80px;
+        font-size:3.25rem;
+        
     }
 
     footer .bytez-logo {
         height: 50px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .display-2 {
+        font-size:calc(1.575rem + 3.9vw);
+    }
+
+    .h3 {
+        font-size: calc(1.3rem + .6vw);
     }
 }
