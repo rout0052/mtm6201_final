@@ -55,13 +55,13 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <!-- Each list item is given the class 'nav-item', with each link getting the classs 'nav-link' -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
                                 <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
@@ -70,87 +70,122 @@
             </nav>
         </header>
 
-        <main role="main">
+
+        <main role="main"> <!-- Main with ARIA landmark role 'main' - redundant role added to show knowledge of ARIA roles  -->
+            <!-- Container fluid for Bootstrap responsiveness. section id=welcome for CSS targeting - welcome section introduces me and gives a short bio  -->
             <section class="container-fluid" id="welcome">
-                <div class="row">
+                <div class="row"> <!-- Row for Bootstrap responsive layout -->
+                    <!-- Image of myself takes up full width on mobile, half width on all larger sizes. -->
                     <picture class="col-xs-12 col-sm-6">
+                        <!-- Media Query for image size on Desktop -->
                         <source srcset="images/homepage/taro-cowboy_450.jpg,
-                                        images/homepage/taro-cowboy_900.jpg 2x" media="(min-width:992px)">
+                                        images/homepage/taro-cowboy_900.jpg 2x" media="(min-width:768px)">
+                        <!-- Media Query for image size on Mobile up until Desktop -->
                         <source srcset="images/homepage/taro-cowboy_325.jpg,
                                         images/homepage/taro-cowboy_650.jpg 2x" media="(min-width:1px)">
+                        <!-- Original image with img-fluid tag to resize if the source switching fails -->
                         <img class="img-fluid" src="images/homepage/taro-cowboy_450.jpg"
                             alt="Taro, a white transmasculine person with shaggy brown hair is smiling at the camera, wearing a white cowboy hat and purple cowboy shirt.">
                     </picture>
+                    <!-- Welcome Text takes up full width on mobile, half width on all larger sizes. -->
                     <div class="col-xs-12 col-sm-6">
+                        <!-- Styling class display-2 to make the header pop -->
                         <h1 class="display-2">Welcome!</h1>
+                        <!-- Styling class added to paragraph for styling -->
                         <p class="h3">I’m Taro Routly, a 20 year old multimedia artist who specializes in web design and
                             development attending Algonquin College’s Interactive Media Design program.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- Section ID=Mission for styling - The mission section gives a statement about what my goals and interests are. -->
             <section class="container-fluid" id="mission">
                 <div class="row">
+                    <!-- Class masonry for styling, takes up full width on all devices -->
                     <div class="masonry col-xs-12">
+                        <!-- Each image has the class 'brick' to target with CSS as part of the div.masonry. This structure repeats for all bricks, so comments are omitted for others for space. -->
                         <picture class="brick">
+                            <!-- Media query for xl Desktop screens -->
+                            <source srcset="images/homepage/mission/rantly_400.jpg,
+                                            images/homepage/mission/rantly_600.jpg 1.5x,
+                                            images/homepage/mission/rantly_800.jpg 2x" media="(min-width:1400px)">
+                            
+                            <!-- Media query for 450px-1400px - I chose to use a non-Bootstrap breakpoint as the smaller images looks too small on the higher side of the xs size  -->
                             <source srcset="images/homepage/mission/rantly_200.jpg,
                                             images/homepage/mission/rantly_300.jpg 1.5x,
                                             images/homepage/mission/rantly_400.jpg 2x" media="(min-width:450px)">
+                            <!-- Media query for the smallest sized screens - 1px-449px -->
                             <source srcset="images/homepage/mission/rantly_120.jpg,
                                             images/homepage/mission/rantly_180.jpg 1.5x,
                                             images/homepage/mission/rantly_240.jpg 2x" media="(min-width:1px)">
-                            <img class="img-fluid" src="images/homepage/mission/rantly_400.jpg"
+                            <!-- Original img with the second largest sized picture with img-fluid responsive class. The reason I chose to use the second largest image was because it was the best of both worlds - smaller sized file that the 800px largest image, but still looks okay on xl screens. -->
+                            <img class="img-fluid" src="images/homepage/mission/rantly_600.jpg"
                                 alt="A light blue background with the word 'RANTLY' spelt in 3D letters, with a black metal cane in front.">
                         </picture>
 
                         <picture class="brick">
+                            <source srcset="images/homepage/mission/autumns-end_600.jpg,
+                                            images/homepage/mission/autumns-end_900.jpg 1.5x,
+                                            images/homepage/mission/autumns-end_1200.jpg 2x" media="(min-width:1400px)">
                             <source srcset="images/homepage/mission/autumns-end_300.jpg,
                                             images/homepage/mission/autumns-end_450.jpg 1.5x,
                                             images/homepage/mission/autumns-end_600.jpg 2x" media="(min-width:450px)">
                             <source srcset="images/homepage/mission/autumns-end_150.jpg,
                                             images/homepage/mission/autumns-end_225.jpg 1.5x,
                                             images/homepage/mission/autumns-end_300.jpg 2x" media="(min-width:1px)">
-                            <img class="img-fluid" src="images/homepage/mission/autumns-end_600.jpg"
+                            <img class="img-fluid" src="images/homepage/mission/autumns-end_900.jpg"
                                 alt="A vector illustration of an orange tree, with a wooden market stand with an orange tiefling with a crow on her hand. In front, stands a white boy with burn marks, glasses, and a patchy long wizard hat. Text on the screen reads 'Luke Trebuchet's Autumns End: From Trials & Trebuchets'">
                         </picture>
 
                         <picture class="brick">
+                            <source srcset="images/homepage/mission/rylan_600.jpg,
+                                            images/homepage/mission/rylan_900.jpg 1.5x,
+                                            images/homepage/mission/rylan_1200.jpg 2x" media="(min-width:1400px)">
                             <source srcset="images/homepage/mission/rylan_300.jpg,
                                             images/homepage/mission/rylan_450.jpg 1.5x,
                                             images/homepage/mission/rylan_600.jpg 2x" media="(min-width:450px)">
                             <source srcset="images/homepage/mission/rylan_150.jpg,
                                             images/homepage/mission/rylan_225.jpg 1.5x,
                                             images/homepage/mission/rylan_300.jpg 2x" media="(min-width:1px)">
-                            <img class="img-fluid" src="images/homepage/mission/rylan_600.jpg"
+                            <img class="img-fluid" src="images/homepage/mission/rylan_900.jpg"
                                 alt="An illustration of a brown spotted rat wearing goggles and a toolbelt, holding a blowtorch over cogs with a halftone background.">
                         </picture>
 
                         <picture class="brick">
+                            <source srcset="images/homepage/mission/storyboard_400.jpg,
+                                            images/homepage/mission/storyboard_600.jpg 1.5x,
+                                            images/homepage/mission/storyboard_800.jpg 2x" media="(min-width:1400px)">
                             <source srcset="images/homepage/mission/storyboard_200.jpg,
                                             images/homepage/mission/storyboard_300.jpg 1.5x,
                                             images/homepage/mission/storyboard_400.jpg 2x" media="(min-width:450px)">
                             <source srcset="images/homepage/mission/storyboard_120.jpg,
                                             images/homepage/mission/storyboard_180.jpg 1.5x,
                                             images/homepage/mission/storyboard_240.jpg 2x" media="(min-width:1px)">
-                            <img class="img-fluid" src="images/homepage/mission/storyboard_400.jpg"
+                            <img class="img-fluid" src="images/homepage/mission/storyboard_600.jpg"
                                 alt="A drawn overlay over a person staring at a line of trees, while the shot information displays on the bottom.">
                         </picture>
                     </div>
-
+                    <!-- Takes up full width on all devices -->
                     <div class="col-xs-12">
                         <h2>Our Mission</h2>
-                        <p>The intersection of art and technology is an unending bid of excitement that we at tarobytez
+                        <!-- Paragraph styled with h3 tag -->
+                        <p class="h3">The intersection of art and technology is an unending bid of excitement that we at tarobytez
                             aim to explore the depths of. Through websites, animation, illustrations and games, we
                             thrive on innovation through the creative and technical process.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- ID=portfolio-blurb for styling. This section gives a 'sneak peak' into the portfolio page and links to it. -->
             <section class="container-fluid" id="portfolio-blurb">
                 <div class="row">
+                    <!-- Link to Portfolio page nested in an h2 -->
                     <h2><a href="portfolio.html">Portfolio</a></h2>
+                    <!-- Class port-categories = portfolio categories -->
                     <div class="port-categories">
+                        <!-- Link to portfolio page with the class 'port-button' - This structure repeats for all 5 port-buttons, so comments are omitted for others for space. -->
                         <a href="portfolio.html" class="port-button">
+                            <!-- h3 with the category name -->
                             <h3>WEB DESIGN</h3>
                             <picture>
                                 <!-- Desktop Breakpoint -->
@@ -170,6 +205,8 @@
                                             images/homepage/categories/category-webdev_450.jpg 1.5x,
                                             images/homepage/categories/category-webdev_600.jpg 2x"
                                     media="(min-width:1px)">
+                                
+                                <!-- Original image set to the 1x of the biggest size, with img-fluid for responsiveness -->
                                 <img class="img-fluid" src="images/homepage/categories/category-webdev_900.jpg"
                                     alt="Random strings of overlaying data on a digital screen, with a purple overlay.">
                             </picture>
@@ -274,12 +311,19 @@
                 </div>
             </section>
 
+            <!-- ID=contact-blurb for styling. This section links my socials and contact page. -->
             <section class="container-fluid" id="contact-blurb">
                 <div class="row">
+                    <!-- Section header - title leads you into the buttons. -->
                     <h2>Interested In More?</h2>
+                    <!-- Div that holds all the links - used for grid and flex in css. -->
                     <div class="socials">
+                        <!-- First link is a standard page link, styled with the keyboard button library: kbc-button which makes it the button, kbc-button-primary which changes it to the dark purple (i modified the primary and secondary button colours in the library files), and kbc-button-lg to make it big. -->
                         <a href="contact.html" class="kbc-button kbc-button-primary kbc-button-lg">Contact Me!</a>
+
+                        <!-- The social media links follow the same structure, so comments are omitted for others for space. This links to an external social media in a new tab (by using the attribute target="_blank"). The kbc-button classes are similar to above, but are the secondary colour instead -->
                         <a href="https://github.com/rout0052" class="kbc-button kbc-button-secondary" target="_blank">
+                            <!-- Img nested in the link with class icon. Alt text and aria-label added for accessibility -->
                             <img class="icon" src="images/general-assets/social-icons/github-icon-white.svg"
                                 alt="github logo" aria-label="link to github">
                         </a>

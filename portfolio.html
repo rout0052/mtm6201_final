@@ -57,10 +57,10 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
+                <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
                 <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <!-- The active class underlines the link, and the aria tag improves navigational accessibility. -->
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
@@ -69,62 +69,83 @@
       </nav>
     </header>
 
-    <main role="main">
-      <section class="container-fluid pg-header">
+    <main role="main"> <!-- Main with ARIA landmark role 'main' - redundant role added to show knowledge of ARIA roles  -->
+      <!-- Container fluid for Bootstrap responsiveness.  -->
+      <section class="container-fluid">
+        <!-- Row for Bootstrap responsive layout -->
         <div class="row">
+          <!-- Page Heading -->
           <h1>Portfolio</h1>
+          <!-- 'h4 text-center' Bootstrap text utility classes for styling purposes. -->
           <p class="h4 text-center">Browse my creative endeavors! There is a huge variety of stuff, so feel free to use
-            the filter
-            system to look for specific content!</p>
+            the filter system to look for specific content!</p>
         </div>
       </section>
 
-
+      <!-- Section id=filters for CSS targeting - filters section includes a dropdown with radio buttons to filter the portfolio content -->
       <section class="container-fluid" id="filters">
         <div class="row">
+          <!-- Dropdown section building block from Bootstrap, modified for my use -->
           <a class="toggle" data-bs-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false"
             aria-controls="collapseFilters">
+            <!-- Link nested content -->
             <h4>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <!-- Chevron Right SVG used vs <i> to animate the rotation in CSS-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                class="bi bi-chevron-right" viewBox="0 0 1rem 1rem">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
               </svg>
-              Filters<i class="bi bi-filter"></i>
+
+              Filters
+              <!-- Bootstrap Filter Icon -->
+              <i class="bi bi-filter"></i>
             </h4>
 
           </a>
 
+          <!-- Collapsed content div with the ID that matches the dropdown -->
           <div class="collapse" id="collapseFilters">
-            <div class="card card-body filter-list" id="myBtnContainer">
+            <!-- Bootstrap classes card and card-body. filter-list class for my styling. id btn-container for the JS filter -->
+            <div class="card card-body filter-list" id="btn-container">
               <h5>Categories</h5>
+              <!-- Show All Button - Each filter-item is in a separate div for display purposes. They all follow the same structure, just with a different category to filter -->
               <div class="filter-item">
-                <input type="radio" onclick="filterSelection('all')" name="categories" id="show-all" checked></input>
+                <!-- Radio button, with the name group categories and the associated id show-all to connect to label, and class btn for JS. the onclick action is the function 'filterSelection' with the passed value 'all'.  -->
+                <input type="radio" onclick="filterSelection('all')" class="btn" name="categories" id="show-all" checked></input>
+                <!-- Attached to above input using the associated id in the for attribute -->
                 <label for="show-all">Show All</label>
               </div>
 
+              <!-- Web Development & Design Button - filters class 'webdev' -->
               <div class="filter-item">
                 <input class="btn" type="radio" name="categories" onclick="filterSelection('webdev')"
                   id="webdev"></input>
                 <label for="webdev">Web Development & Design</label>
               </div>
 
+              <!-- Digital Illustration Button - filters class 'illustration' -->
               <div class="filter-item">
                 <input class="btn" type="radio" onclick="filterSelection('illustration')" name="categories"
                   id="illustration"></input>
                 <label for="illustration">Digital Illustration</label>
               </div>
 
+              <!-- User Interface & Graphic Design Button - filters class 'graphics' -->
               <div class="filter-item">
                 <input class="btn" type="radio" onclick="filterSelection('graphics')" name="categories"
                   id="ui-graphics"></input>
                 <label for="ui-graphics">User Interface & Graphic Design</label>
               </div>
+
+              <!-- Animation (2D & 3D) Button - filters class 'animation' -->
               <div class="filter-item">
                 <input class="btn" type="radio" onclick="filterSelection('animation')" name="categories"
                   id="animation"></input>
                 <label for="animation">Animation (2D & 3D)</label>
               </div>
+
+              <!-- Videography & Editing Button - filters class 'video' -->
               <div class="filter-item">
                 <input class="btn" type="radio" onclick="filterSelection('video')" name="categories"
                   id="videography"></input>
@@ -135,34 +156,44 @@
         </div>
       </section>
 
+      <!-- Section id=pieces for CSS targeting - pieces section includes a pagination div at the start and the end, and all of the portfolio pieces -->
       <section id="pieces" class="container-fluid">
         <div class="row">
+          <!-- This pagination is currently not functional as I have yet to learn how to use it. Aria-label for accessibility -->
           <nav class="pagination" aria-label="Page navigation">
             <span>
+              <!-- Aria-label for accessibility. &laquo; is the ASCII code for the double left chevron  -->
               <a href="#" aria-label="Previous">&laquo;</a>
               <a class="active" href="#">1</a>
-              <a href="#" class="disabled">2</a>
+              <a href="#">2</a>
               <a href="#">3</a>
+              <!-- Aria-label for accessibility. &raquo; is the ASCII code for the double right chevron  -->
               <a href="#" aria-label="Next">&raquo;</a>
             </span>
           </nav>
           <div>
-            <div class="browser col-xs-12 col-md-6 filterDiv video">
+            <!-- Each of the following pieces (class 'browser' and 'filterDiv') follow the same structure, so I ommitted the structure based comments on the other pieces. -->
+
+            <!-- Browser class for the styling to look like a browser window. Bootstrap columns: full width until desktop, where it is half width. filterDiv is used to target these divs in the JS, and the lasst class/es are what filter categories they fit into (in this case, video) -->
+            <div class="browser col-xs-12 col-md-6 filterDiv video"> <!-- Filters: video -->
+              <!-- Thumbnail image for the piece -->
               <picture>
-                <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg" media="(min-width: 768px)" />
+                <!-- Tablet & Up Media Query (sm) -->
                 <source srcset="images/portfolio/storyboarding-thumbnail_800.jpg" media="(min-width: 576px)" />
+                <!-- Mobile Media Query (xs) -->
                 <source srcset="images/portfolio/storyboarding-thumbnail_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/storyboarding-thumbnail_800.jpg"
                   alt="A drawn overlay over a person staring at a line of trees, while the shot information displays on the bottom.">
               </picture>
+              <!-- Title of Piece -->
               <h5>The Art Of Storyboarding</h5>
+              <!-- Description -->
               <p>The final project for Intro to Videography explores the importance of storyboarding in video
                 production.</p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv animation">
+            <div class="browser col-xs-12 col-md-6 filterDiv animation"> <!-- Filters: animation -->
               <picture>
-                <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/rantly-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/rantly-thumbnail_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/rantly-thumbnail_800.jpg"
@@ -173,9 +204,8 @@
                 of my cane bouncing on the screen. </p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv illustration graphics">
+            <div class="browser col-xs-12 col-md-6 filterDiv illustration graphics"> <!-- Filters: illustration, graphics -->
               <picture>
-                <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/zinejam2023_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/zinejam2023_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/zinejam2023_800.jpg"
@@ -186,9 +216,8 @@
                 annual D20 Zine Jam for charity.</p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv webdev graphics">
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev graphics"> <!-- Filters: webdev graphics -->
               <picture>
-                <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/grassroots-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/grassroots-thumbnail_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/grassroots-thumbnail_800.jpg"
@@ -199,9 +228,8 @@
                 brand identity and website in teams of five.</p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv graphics">
+            <div class="browser col-xs-12 col-md-6 filterDiv graphics"> <!-- Filters: graphics -->
               <picture>
-                <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/celestial-dining-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/celestial-dining-thumbnail_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/celestial-dining-thumbnail_800.jpg"
@@ -211,9 +239,9 @@
               <p>For my Design Processes class, we were tasked with coming up with a restaurant idea, and creating a
                 full brand identity for it.</p>
             </div>
-            <div class="browser col-xs-12 col-md-6 filterDiv webdev">
+
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev"> <!-- Filters: webdev -->
               <picture>
-                <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/hats4cats_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/hats4cats_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/hats4cats_800.jpg"
@@ -224,9 +252,8 @@
                 4 Cats"</p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv animation">
+            <div class="browser col-xs-12 col-md-6 filterDiv animation"> <!-- Filters: animation -->
               <picture>
-                <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/crowrigami-thumbnail_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/crowrigami-thumbnail_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/crowrigami-thumbnail_800.jpg"
@@ -237,9 +264,8 @@
                 the podcast Trials & Trebuchets. </p>
             </div>
 
-            <div class="browser col-xs-12 col-md-6 filterDiv webdev">
+            <div class="browser col-xs-12 col-md-6 filterDiv webdev"> <!-- Filters: webdev -->
               <picture>
-                <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 768px)" />
                 <source srcset="images/portfolio/the-system_800.jpg" media="(min-width: 576px)" />
                 <source srcset="images/portfolio/the-system_400.jpg" media="(min-width: 1px)" />
                 <img class="thumbnail" src="images/portfolio/the-system_800.jpg"
@@ -249,15 +275,17 @@
               <p>The midterm final for Web Development II, this assignment had us create a one page website about space
                 with a focus on accessibility, pseudo-selectors, and animations</p>
             </div>
-
-
           </div>
+
+          <!-- This pagination is currently not functional as I have yet to learn how to use it. Aria-label for accessibility. Base from W3 Schools -->
           <nav class="pagination" aria-label="Page navigation">
             <span>
+              <!-- Aria-label for accessibility. &laquo; is the ASCII code for the double left chevron  -->
               <a href="#" aria-label="Previous">&laquo;</a>
               <a class="active" href="#">1</a>
-              <a href="#" class="disabled">2</a>
+              <a href="#">2</a>
               <a href="#">3</a>
+              <!-- Aria-label for accessibility. &raquo; is the ASCII code for the double right chevron  -->
               <a href="#" aria-label="Next">&raquo;</a>
             </span>
           </nav>
