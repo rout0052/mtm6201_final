@@ -1,23 +1,26 @@
+/* CSS Variables */
 :root {
-    /* Variables Here */
     --primary: #3A1259;
     --secondary: #926DD6;
     --link-color: #612C88;
     --highlight: #E7DBFF;
 }
 
+/* All Content is in the wrapper. On mobile it take up 100% with a white background and centers the content (comes into play later) */
 .wrapper {
     margin: auto;
     width: 100%;
-
     background-color: white;
 }
 
+/* BASE CHANGES */
 
+/* By default the body copy is Gill Sans Nova */
 body {
     font-family: gill-sans-nova, sans-serif;
 }
 
+/* H1 are in Kallisto, primary colour (dark purple), centered, with a 900 weight (equal to the 'Heavy' style of the font) */
 h1 {
     font-family: kallisto, sans-serif;
     font-weight: 900;
@@ -25,147 +28,189 @@ h1 {
     color: var(--primary);
 }
 
+/* Display 2 is a Bootstrap text utility that I use for the "Welcome!" text on the home page. It is very thin by default, so I set it to the same weight as the other H1s */
 .display-2 {
     font-weight: 900;
 }
 
+/* H2 are in Kallisto, primary colour (dark purple), with a 800 weight (equal to the 'Bold' style of the font) */
 h2 {
     font-family: kallisto, sans-serif;
     font-weight: 800;
     color: var(--primary);
 }
 
+/* Boosts the paragraph text to be a bit bigger for readability */
 p {
     font-size: 1.25rem;
 }
 
+/* Adds a separating margin on top of each section tag */
 section {
     margin-top: 40px;
 }
 
+/* Adds a margin to each row on the sides. Rows are apart of the whole website, so this adds margins to all sections. */
 .row {
     margin-left: 25px;
     margin-right: 25px;
 }
 
+/* Changes the link color for all links by default */
 a:link {
     color: var(--link-color);
 
 }
 
+/* The links with the class port-button are white, not --link-color */
 a.port-button:link {
     color: white;
 
 }
 
+/* Link colours stay the same on visited. */
 a:visited {
     color: var(--link-color);
 
 }
 
-
+/* Focus state adds a border around the element, and underlines the text of the links. */
 a:focus {
     border: 2px solid var(--secondary);
     text-decoration: underline;
 }
 
-.nav-link {
-    font-family: kallisto, sans-serif;
-}
-
-.nav-link.active {
-    text-decoration: underline;
-}
-
-nav.navbar {
-    padding-left: 40px;
-    padding-right: 20px;
-}
-
-.navbar-dark {
-    background-color: var(--primary) !important;
-
-}
-
-.navbar a:link,
-.footer a:link {
-    color: white;
-    font-weight: 700;
-}
-
-.navbar a:visited,
-.footer a:visited {
-    color: white;
-}
-
-
-.footer-dark {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-
-}
-
-footer p,
-footer ul,
-footer a>img.bytez-logo {
-    margin-top: 20px;
-}
-
-footer a {
-    display: inline;
-    font-size: 1.5rem;
-    text-decoration-line: none;
-}
-
-footer div.socials {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-footer div.socials a {
-    padding: 10px;
-    margin:5px;
-}
-
-ul.unstyled {
-    list-style-type: none;
-}
-
+/* Sets the width and height for the images with class .icon, which is used for the social media icons. */
 img.icon {
     width: 40px;
     height: auto;
 }
 
-footer img.icon {
-    width: 60px;
-
+/* Changes the radio input type to the secondary purple colour */
+input[type="radio"] {
+    accent-color: var(--secondary);
 }
 
+/* NAVIGATION & FOOTER STYLES */
+
+/* Navigation links are in Kallisto */
+.nav-link {
+    font-family: kallisto, sans-serif;
+}
+
+/* If the navigation link is the active page, it is underlined. */
+.nav-link.active {
+    text-decoration: underline;
+}
+
+/* Adds margin to the left of the first nav item (the brand logo) that matches the margin of the row */
+nav .navbar-brand {
+    margin-left:25px;   
+}
+
+/* Adds margin to the right of both the collapsed ul (for desktop) and the hamburger button that matches the margin of the row */
+nav div.collapse, nav button.navbar-toggler {
+    margin-right: 25px;
+}
+
+/* Adds a left margin to the collapsed content to fit row margins. */
+nav div.collapse {
+    margin-left:25px;
+}
+
+/* Sets the navbar colour to dark purple. In order to work with Bootstrap, !important needs to be used to override their colours. */
+.navbar-dark {
+    background-color: var(--primary) !important;
+}
+
+/* The class targeting the logo that is used in the navigation and footer. Sets display type (inline-block) and height/width */
 .bytez-logo {
     display: inline-block;
     height: 40px;
     width: auto;
 }
 
-footer .bytez-logo {
-    height: 50px;
-    /* width: 200px; */
+/* Sets colour and font-weight of the nav & footer links to white and 700 (font-weight between Medium and Bold for Kallisto) -  */
+.navbar a:link,
+.footer a:link {
+    color: white;
+    font-weight: 700;
 }
 
-main section:last-child {
-    margin-bottom: 40px;
+/* Keeps the links in the nav and footer white when visited. */
+.navbar a:visited,
+.footer a:visited {
+    color: white;
+}
+
+/* Sets the background colour to the primary dark purple, the copy color to white, and aligns the text in the center (this is for mobile only) */
+.footer-dark {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+/* Adds a top margin separating the footer from the content. Adds top and bottom padding for the footer to pad it out. */
+footer div.container-fluid {
+    margin-top:40px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+/* Increases font size for footer links, and removes the underline. */
+footer a {
+    font-size: 1.5rem;
+    text-decoration-line: none;
+}
+
+/* Adds margin to the bottom of the tarobytez logo, unstyled list of links, and the social link. I chose to do this instead of targeting footer divs that are children of div.row, because it gives a margin beneath the logo too (the targeting the link specifically makes sure that the margin-bottom is on the link vs the img, which made the focus state off), and the unstyled list already had a margin that messed with it.  */
+footer div.row > div:first-child > a:first-child, footer ul.unstyled, footer div.socials {
+    margin-bottom: 1rem;
+}
+
+/* Targeting the link of the logo, this display change to inline-block means that the focus border covers the full image, not just link size. */
+footer div.row > div:first-child > a:first-child {
+    display: inline-block;
+}
+
+/* Removes bullet point from unstyled class in footer. .unstyled is used by Bootstrap, and might be used upon site expansion, so I did not want to just remove bullets from all .unstyled lists. */
+footer ul.unstyled {
+    list-style-type: none;
+}
+
+/* For mobile, the socials are displayed with flex, wrapping onto other lines if too little space and centers content */
+footer div.socials {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Pads out the social links in the footer */
+footer div.socials a {
+    padding: 10px;
+}
+
+/* Increases the size of social media icons in the footer. */
+footer img.icon {
+    width: 60px;
+}
+
+/* Increases the size of the tarobytez logo in the footer */
+footer .bytez-logo {
+    height: 50px;
+    width: auto;
 }
 
 /* HOME PAGE */
 
 /* HOMEPAGE: WELCOME SECTION */
-section#welcome {
+
+/* Centers the text in the 'welcome' section (for mobile) */
+section#welcome, section#mission, section#portfolio-blurb, section#contact-blurb {
     text-align: center;
 }
 
+/* Sets image width in welcome section to 100% (for mobile) */
 section#welcome>img {
     width: 100%;
     height: auto;
@@ -173,52 +218,51 @@ section#welcome>img {
 
 
 /* HOMEPAGE: MISSION SECTION */
-section#mission {
-    text-align: center;
-}
 
+/* Targets the mission section's div.masonry that includes the pictures. To display in the intended way, it uses a grid display with template areas to stretch the bigger two images across 6/16 sections, while the smaller images get 2/16. It also adds a gap and a margin-bottom for spacing.   */
 section#mission div.masonry {
     display: grid;
     grid-template-areas: 'rantly rantly autumns autumns'
-        'rylan rylan autumns autumns'
-        'rylan rylan autumns autumns'
-        'rylan rylan board board';
+                         'rylan rylan autumns autumns'
+                         'rylan rylan autumns autumns'
+                         'rylan rylan board board';
     gap: 10px;
     margin-bottom: 20px;
 }
 
+/* Assigns grid area 'rantly' and aligns the image toward the center, in this case, right. */
 section#mission div.masonry .brick:nth-child(1) {
     grid-area: rantly;
     justify-self: right;
 }
 
+/* Assigns grid area 'autumns' and aligns the image toward the center, in this case, left. */
 section#mission div.masonry .brick:nth-child(2) {
     grid-area: autumns;
     justify-self: left;
 }
 
+/* Assigns grid area 'rylan' and aligns the image toward the center, in this case, right. */
 section#mission div.masonry .brick:nth-child(3) {
     grid-area: rylan;
     justify-self: right;
 }
 
+/* Assigns grid area 'board' and aligns the image toward the center, in this case, left. */
 section#mission div.masonry .brick:nth-child(4) {
     grid-area: board;
     justify-self: left;
-    align-self: self-start;
 }
 
 /* HOMEPAGE: PORTFOLIO BLURB */
 
-section#portfolio-blurb {
-    text-align: center;
-}
-
+/* Displays the portfolio categories div as a grid with a 10px gap. */
 section#portfolio-blurb div.port-categories {
     display: grid;
     gap: 10px;
 }
 
+/* Sets the width and height for the portfolio buttons - being 100% of width, and 100px tall. It aligns its content in the center. The relative position allows for text over the image. Copy color is white. */
 section#portfolio-blurb div.port-categories>a.port-button {
     color: white;
     height: 100px;
@@ -228,78 +272,69 @@ section#portfolio-blurb div.port-categories>a.port-button {
 
 }
 
-section#portfolio-blurb div.port-categories>a>h3 {
+/* Imposes the header text centered over the image */
+section#portfolio-blurb div.port-categories > a > h3 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* The image is set to the same size as the button, with an object fit of cover to keep the aspect ratio but clips to fill the given dimension. */
 section#portfolio-blurb div.port-categories>a.port-button>picture>img {
     object-fit: cover;
-
     height: 100px;
     width: 100%;
-
 }
 
 /* HOMEPAGE: CONTACT SECTION ON HOME PAGE */
 
-section#contact-blurb {
-    text-align: center;
-}
-
+/* Targets the socials in the contact blurb section, setting up the grid display that is used on mobile. Sets two columns at 80px (5rem), justifies the content in the center, with a gap of 5px */
 section#contact-blurb div.socials {
     text-align: center;
     display: grid;
-    grid-template-columns: 80px 80px;
+    grid-template-columns: repeat(2, 5rem);
     justify-content:center;
     gap: 5px;
 }
 
+/* The links in the socials div are centered on both axis' and the text is aligned. */
 section#contact-blurb div.socials a {
     text-align: center;
     justify-self: center;
     align-self: center;
 }
 
+/* The first child, the 'Contact Me!' button spans two columns */
 section#contact-blurb div.socials a:first-child {
     grid-column: 1 / span 2;
 }
-
-
 
 
 /* PORTFOLIO PAGE */
 
 /* PORTFOLIO: FILTERS SECTION */
 
-
+/* Adds transition to the transform for the chevron svg in the Filters togggle */
 section#filters a.toggle h4>svg.bi-chevron-right {
     transition: transform 0.5s;
 }
 
+/* When the toggle is expanded (using a filter by attribute, as the toggle changes to aria-expanded=true when opened), rotate the chevron to point down, and adds the transition. */
 section#filters a.toggle[aria-expanded="true"] h4>svg.bi-chevron-right {
     transform: rotate(90deg);
     transition: transform 0.5s;
 }
 
+/* Removes the default border settings of the dropdown content, then adds the left border, in the secondary colour */
 section#filters .card {
     border: none;
-    border-left: var(--secondary) 2px solid;
     border-radius: 0;
-    font-size:1rem;
+    border-left: var(--secondary) 2px solid;
 }
 
-section#filters .card h5 {
-    /* font-size:1.5rem; */
-}
-
-input[type="radio"] {
-    accent-color: var(--secondary);
-}
-
-.pagination {
+/* Adds the styling for the pieces section pagination only. I specify the section in case I want to style differently if a pagination were to be included on a different page. Adds a top and bottom margin for spacing, centers the text and content, and has a relative position for adding the  line with ::before on tablet. */
+section#pieces .pagination {
     position: relative;
     text-align: center;
     justify-content: center;
@@ -307,23 +342,25 @@ input[type="radio"] {
     margin-bottom: 20px;
 }
 
-
-.pagination a {
+/* Gives the links in the pagination the body color of black, adds padding, removes underline, and transitions the background colour for hover states   */
+section#pieces .pagination a {
     color: black;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-    /* margin:auto; */
 
 }
 
-.pagination a.active {
+/* The active tab of the pagination has the background color --link-color, with copy of white for visibility */
+section#pieces .pagination a.active {
     background-color: var(--link-color);
     color: white;
 }
 
-.pagination a:hover:not(.active) {
+/* Adds a light grey hover background color on hover to the pagination links that are not active. */
+section#pieces .pagination a:hover:not(.active) {
     background-color: #ddd;
+    transition: background-color .3s;
 }
 
 /* Not displayed by default - the 'show' class is added by the script to allow for filtering */
@@ -331,20 +368,21 @@ input[type="radio"] {
     display: none;
 }
 
+/* As said above, the show class is added by the filter script to show only the specific categories. */
 .show {
     display: block;
 }
 
+/* This class is assigned to each of the portfolio pieces to add the 'browser window' aesthetic. The base class adds padding and margin to the elements, and the border in the primary purple */
 .browser {
     padding: 10px;
     margin: 10px;
     margin-top: 40px;
     border: 3px solid var(--primary);
-
 }
 
+/* Adds the content in the bar above each pieces using the ::before pseudo element. Sets the same border as the browser class, primary purple background colour, displayed inline-block with a 14pt font-size and a white copy color. The content has the CSS content code for the symbols most like browser window icons. They are text-aligned right, at the flex end for align-self. Their position is absolute. It is translated with a calculated width to get to the right area. This is a very imperfect set up for this, but something I am planning on learning a more advanced, better way to do it :) */
 .browser::before {
-    box-sizing: border-box;
     font-size: 14pt;
     color: white;
     border: 3px solid var(--primary);
@@ -359,6 +397,7 @@ input[type="radio"] {
     transform: translate(-13px, -30px);
 }
 
+/* Sets the thumbnail image for each piece to have a border with radius, top and bottom margin, and take up 100% of its allotted width.  */
 section#pieces img.thumbnail {
     width: 100%;
     margin-top: 10px;
@@ -370,6 +409,7 @@ section#pieces img.thumbnail {
 
 /* CONTACT PAGE */
 
+/* For the input/textarea sections of the the contact form: display block (on separate line to the labels), taking up 100% width. The background color is the --highlight light purple, with a --primary purple border with radius. The text is in the --primary purple. Adds padding around entered text.  */
 section#contact-form form input,
 section#contact-form form textarea {
     display: block;
@@ -379,21 +419,25 @@ section#contact-form form textarea {
     border-radius: 5px;
     font-size: 1.25rem;
     color: var(--primary);
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
 }
 
+/* Sets default textarea starting at 1.25rem (the font size) * 7, but can be resized on desktop. I thought 7 lines were appropriate for an inquiry to start.  */
 section#contact-form form textarea {
     height: calc(1.25rem * 7);
 
 }
 
+/* Adjusts font of the form labels (size, weight, and color) */
 section#contact-form form label {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary);
 }
 
+/* JUMP TO TOP BUTTON */
 
+/* Fixed position on the screen in the bottom corner, with set width and font-size that changes based on device. Text aligned in the center with added padding. */
 a#jump-top {
     position: fixed;
     bottom: 40px;
@@ -408,6 +452,9 @@ a#jump-top {
 
 /* sm Screen Breakpoint (Tablet) */
 @media screen and (min-width: 576px) {
+    /* BASE STYLES */
+    
+    /* Due to overflow, I modified the font-sizes of the .display-2 and .h3 Bootstrap classes to a better fitting size until the lg breakpoint where there is no overflow.  */
     .display-2 {
         font-size:3rem;
     }
@@ -416,88 +463,100 @@ a#jump-top {
         font-size:1.3rem;
     }
 
+    /* NAVIGATION & FOOTER STYLES */
+    
+    /* Aligns the text at the start,*/
+    .footer-dark {
+        text-align: start;
+    }
 
+    /* Sets the social links to display in a 2x2 grid */
+    footer div.socials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* HOMEPAGE - WELCOME SECTION */
+    /* Aligns the welcome text to the left. Needs to specify the h1 due to original h1 being center aligned */
     section#welcome,
     section#welcome h1 {
         text-align: left;
     }
 
+    /* HOMEPAGE - PORTFOLIO SECTION */
+    /* Changes the homepage portfolio category buttons to a 2 column grid */
     section#portfolio-blurb div.port-categories {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Changes the first portfolio category button (web dev) to take up 2 columns */
     section#portfolio-blurb div.port-categories>a.port-button:first-child {
         grid-column: 1 / span 2;
     }
 
+    /* HOMEPAGE - CONTACT SECTION */
+    /* Changes the display of the social buttons of the contact-blurb to flex */
     section#contact-blurb div.socials {
         display: flex;
     }
 
+    /* Pushes the 1st, 4th, and 5th child to the end of the flex, which centers the Contact Me! button. */
     section#contact-blurb div.socials a:nth-child(1), div.socials a:nth-child(4), div.socials a:nth-child(5) {
         order:1;
     }
 
+    /* PORTFOLIO PAGE - FILTERS SECTION */
+
+    /* Next 3 adjusts fonts in the Filters dropdown. */
+
+    /* Font-size for the toggle text */
     section#filters a.toggle h4 {
         font-size:1.75rem;
     }
 
+    /* Font-size for the text in the dropped down card (labels) */
     section#filters .card {
         font-size:1.25rem;
     }
+
+    /* Font-size for the title 'Categories' in the dropdown. */
     section#filters .card h5 {
         font-size:1.35rem;
     }
 
-    .pagination {
-        margin-left: 22px;
-        margin-right: 10px;
+    /* HOMEPAGE - PIECES SECTION */
+
+    /* Adds margin to the left and right of the pagination matching the row */
+    section#pieces .pagination {
+        margin-left: 25px;
+        margin-right:25px;
     }
 
-    .pagination span {
+    /* Adds a background color to the span around the pagination, and a padding on the sides. Positions the span relative and in front of the line with z-index. */
+    section#pieces .pagination span {
         background: #fff;
         padding: 0 15px;
         position: relative;
         z-index: 1;
     }
 
-    .pagination:before {
+    /* This pseudo element adds a line on either side (in reality, behind, but visually its on either side due to the background on the span) using a background color, height, and an absolute position.*/
+    section#pieces .pagination:before {
         background: var(--link-color);
         content: "";
         display: block;
         height: 3px;
         position: absolute;
         top: 50%;
-        width: calc(100% - 40px);
+        width: calc(100% - 48px);
         margin: auto;
-    }
-
-    .pagination:before {
         left: 0;
     }
 
 
-    .footer-dark {
-        text-align: start;
-        justify-content: space-between;
-    }
+    /* JUMP TO TOP BUTTON */
 
-    footer div.socials {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    footer div.socials a {
-        place-self: center;
-
-    }
-
-
-
-    footer ul {
-        margin-top: 0px;
-    }
-
+    /* Increases size of button and symbol font */
     a#jump-top {
         max-width:70px;
         font-size:3rem;
@@ -506,69 +565,60 @@ a#jump-top {
 
 /* md Screen Breakpoint (Desktop) */
 @media screen and (min-width: 768px) {
-
+    /* BASE STYLES */
+    /* Adds a fixed background image to the body of the site */
     body {
         background-image: url("../images/general-assets/background.png");
         background-attachment: fixed;
     }
 
+    /* Changes the wrapper width to 75% (with the background now showing on that 25%. The max width of the content is 1200px, or the xl breakpoint in Bootstrap */
     .wrapper {
         width: 75%;
         max-width: 1200px;
-
-
     }
+    
+    /* NAVIGATION & FOOTER STYLES */
 
-    /* .display-2 {
-        font-size:3rem;
-    } */
-
+    /* Justifies the collapsed content that is now expanded, to the right side of the nav. */
     div.navbar-collapse ul {
         justify-self: right;
     }
 
+    /* Styles now expanded nav items with padding, a higher font-size, and a border on the left that separates the content */
     div.navbar-collapse li.nav-item {
         padding: 5px;
         font-size: 1.25rem;
         border-left: 1px solid white;
     }
 
+    /* Removes the left border from the first nav item */
     div.navbar-collapse li.nav-item:first-child {
         border-left: none;
     }
 
+    /* PORTFOLIO PAGE - PIECES SECTION */
 
-
-    section#welcome div:nth-child(2),
-    section#mission div:nth-child(2) {
-        align-self: center;
-
-    }
-
-    section#mission div.masonry .brick:nth-child(1) {
-        align-self: self-end;
-    }
-
-    section#mission div.masonry .brick:nth-child(2) {
-        align-self: self-end;
-    }
-
+    /* Sets the div with the portfolio pieces into a grid with 2 columns and a 20px gap  */
     section#pieces div.row>div:nth-child(2) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-
     }
 
+    /* Sets the width of the browser class to 95% for spacing reasons */
     .browser {
         width: 95%;
     }
 
+    /* Adjusts the width of the browser styling to fit the new grid display */
     .browser::before {
-        width: calc(35% - 49.5px);
-        transform: translate(-13px, -30px);
+        width: calc(35% - 50px);
     }
 
+    /* JUMP TO TOP BUTTON */
+
+    /* Adjusts size of jump to top button. Adjusts placement horizontally to adjust for new wrapper width (calc is 12.5% or half of the space the wrapper isn't using, plus the 40px it was out before. */
     a#jump-top {
         right: calc(12.5% + 40px);
         max-width:80px;
@@ -576,12 +626,11 @@ a#jump-top {
         
     }
 
-    footer .bytez-logo {
-        height: 50px;
-    }
 }
 
+/* lg Screen Breakpoint (Larger Desktop) */
 @media screen and (min-width: 992px) {
+    /* Sets back to the normal font-sizes for Bootstrap classes .display-2 and .h3 */
     .display-2 {
         font-size:calc(1.575rem + 3.9vw);
     }
