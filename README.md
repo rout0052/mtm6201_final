@@ -1,4 +1,4 @@
-[PURPLE TAROBYTEZ LOGO HERE]
+![tarobytezlogo](https://github.com/user-attachments/assets/848b70f6-6beb-47ca-8d83-4b4ff745d82f)
 
 # READ ME! 
 ### *Information on the final project for MTM6201*
