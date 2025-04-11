@@ -10,7 +10,15 @@
 
 <br>
 
-[Response Here]
+The real question is what challenges I *didn’t* face in this development period.
+
+But jokes aside, I learned A LOT through this project, so I am breaking it down in point form!
+
+- **Bootstrap**. Before this class I had learned Bootstrap 6 years ago and only for its column system. So that is to say, adjusting to the huge library of Bootstrap for this project was a struggle. The column and text utilities were decently easy, but the real beast came with setting the navigation and the footer. It is very easy when you are designing in Figma to think of a cool navigation, but to modify it to an unfamiliar Framework was difficult. I could not figure out how to override the default colours (had to use !important), how to work dropdowns, expanding menus. It felt very overwhelming at first but as I worked through it, it got easier as I broke down what exactly each part meant, and compared to different resources on both the Bootstrap website and the wider internet. 
+- **Filters**. Javascript, as it relates to Web Development, is still entirely new to me, aside from a brief dip into it for svg animation in Digital Graphics. So in order to filter my portfolio pieces by category, I had to use an external script and adapt it to my purposes. Luckily, I found a script that got the job done, even if it was not the full functionality I wanted. Using the script was pretty simple overall, especially since I have a history in programming in high school. I look forward to learning much more Javascript over the summer and the following semesters! 
+- **Browser Class**. This part of my site was the absolute bane of my existence to be frank. I had a very specific vision, and I desperately wanted to execute them how I had planned. Figuring it out was pure trial and error, with the pseudo elements of ::before and ::after being so finicky I had to leave my computer multiple times before I punched it. Because of all this trial and error however, I feel a lot more comfortable with using them in future projects because I think I (mostly) got them figured out! 
+
+Overall, this project gave me a lot of valuable experience in the full project life-cycle and was an awesome glimpse into my future as a web developer! Even if I was complaining a lot above, I love solving problems and figuring out the exact way things work, so an exploratory assignment like this was fantastic!
 
 <br>
 
