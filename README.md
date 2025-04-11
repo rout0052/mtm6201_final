@@ -16,9 +16,13 @@
 
 # Changes From The Prototype
 - **Fonts**: I changed the fonts to resemble my style tiles, since the fonts were not available on Figma, and there was trouble in downloading the fonts and bringing them to Figma. My style tiles image is in images/design-documents for reference. 
+- **Buttons**: Another thing I had wanted to change from the Figma design that was planned was the buttons - I knew I wanted to use the [*Keyboard.css*](https://www.cssscript.com/keyboard-style-buttons/) library by shhdharmen from the jump, but I did not want to recreate them fully in Figma. I had always wanted to change the jump to top, social media, and submit buttons to this library, and my site reflects that. 
 - **Nav Dropdown Menu**: I removed the dropdown part of the navigation menu since as of right now, I don’t have the structure / knowledge necessary to be able to send the data to the portfolio page to pre-filter by a specific category. Without this, it is unnecessary to have a dropdown with no functionality. 
 - **Checkboxes to Radio Buttons**: For the filter buttons on the portfolio page, I changed the filter system from using checkbox inputs to radio buttons. As I have not learned JS yet, I was adapting a script from [*W3Schools*](https://www.w3schools.com/howto/howto_js_filter_elements.asp) to fit my project. Checkboxes did not work with the script since multiple can be checked, which wasn’t built into the script, causing it not to work. Changing it to radio buttons could only have one checked at a time, and functioned with the script I was using. In the future, after learning JS for myself, I plan to rescript it to work with checkboxes as I want the user to be able to select multiple categories at the same time. 
+- **Filters Dropdown**: I adjusted the look and feel of the Filters dropdown menu on the Portfolio page to a better design. I changed the Filters dropdown toggle to the secondary purple with the appropriate filter symbol vs the slider. Then I changed the left border to secondary purple to match again, the accent color on the radio buttons to secondary purple, and removes the italic style on the Categories subheading since it did not match anywhere else.
 - ***Our Mission* on Desktop**: I modified the layout of the Our Mission section so that the image masonry stays full width on all devices, instead of the original design where it goes to half width on desktop. I chose to change this because it looks better - the user being able to fully see the images instead of having them squished to the side.
+- **Logos In Footer**: A simple one. I removed the circle around the social media icons in the footer and made them white because it looked better. 
+- **Pagination**: I found a better more stylish pagination style on W3Schools, so I kept the separation bar from the original plan with the new design.
 
 <br>
 
@@ -33,6 +37,20 @@
 <br>
 
 # Assets
+## Libraries & Frameworks
+[**Bootstrap 5.3.5**](https://getbootstrap.com/) & [**Bootstrap Icons**](https://icons.getbootstrap.com/)
+
+Created by the [*Bootstrap Team*](https://getbootstrap.com/docs/5.3/about/team/) 
+
+[**Keyboard.css**](https://www.cssscript.com/keyboard-style-buttons/)
+
+Created by [*shhdharmen*](https://github.com/shhdharmen) (Dharmen Shah), found on [*CSS Script*](https://www.cssscript.com/)
+
+## Scripts
+**filter.js**
+
+Adapted version of the script made by [*W3Schools*](https://www.w3schools.com/) found [here](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
+
 ## Fonts
 *Fonts added via Adobe Fonts*
 
